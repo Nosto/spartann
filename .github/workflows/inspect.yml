@@ -1,0 +1,26 @@
+name: Intellij
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Run Intellij
+        uses: mridang/action-idea@master
+        with:
+          target: /github/workspace
+          profile: /github/workspace/.idea/inspectionProfiles/CI.xml
+          output: output
+          verbosity: v2
+          scope: Inspection
+          plugins: 1347
+
+      - name: Archive inspection results
+        if: ${{ failure() }}
+        uses: actions/upload-artifact@v1
+        with:
+          name: inspection-results
+          path: output
