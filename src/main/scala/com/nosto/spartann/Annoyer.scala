@@ -4,6 +4,7 @@ import annoy4s.Annoy.annoyLib
 import annoy4s.{Angular, Euclidean, Hamming, Manhattan}
 
 import scala.collection.mutable
+import scala.reflect.ClassTag
 import scala.util.{Failure, Success, Using}
 
 /**
@@ -21,7 +22,7 @@ object Annoyer extends LazyLogging {
    * @author mridang
    * @see `com.nosto.product.image.similarity.annoy.Annoyer.create`
    */
-  def createFor[IdType](allItems: Iterator[Embeddings[IdType]], annoyConfig: AnnoyConfig):
+  def createFor[IdType: ClassTag](allItems: Iterator[Embeddings[IdType]], annoyConfig: AnnoyConfig):
   Iterator[Neighbour[IdType]] = {
 
     //TODO: Check if zipWithIndex causes extra iteration
@@ -58,7 +59,7 @@ object Annoyer extends LazyLogging {
    * @param maxResults  the number of results to be returned. default 10.
    * @return an iterator of all the entries with the "n" nearest neighbours.
    */
-  def create[IdType](allItems: Iterator[(Long, Embeddings[IdType])],
+  def create[IdType: ClassTag](allItems: Iterator[(Long, Embeddings[IdType])],
                      annoyConfig: AnnoyConfig, verbose: Boolean = false, //TODO:
                      maxResults: Int = 10):
   Iterator[Neighbour[IdType]] = {
@@ -74,9 +75,7 @@ object Annoyer extends LazyLogging {
     val indexedItems: mutable.Map[Int, IdType] = mutable.Map[Int, IdType]()
     allItems
       .foreach((item: (Long, Embeddings[IdType])) => {
-        val vectors: Array[Float] = item._2.getVec.map { vector =>
-          vector.floatValue()
-        }.toArray
+        val vectors: Array[Float] = item._2.getVec.toArray
 
         println(s"Adding item ${item._2} to index")
         indexedItems.put(item._1.toInt, item._2.getId)

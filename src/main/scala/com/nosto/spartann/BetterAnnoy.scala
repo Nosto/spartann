@@ -13,7 +13,6 @@ import java.io.Closeable
  * The changes from this class can (possibly) be committed upstream.
  *
  * @author mridang
- * @inheritdoc
  */
 class BetterAnnoy(val annoyIndex: Pointer, override val dimension: Int, override val metric: Metric)
   extends Annoy[String](Map.empty, Seq.empty, annoyIndex, dimension, metric)

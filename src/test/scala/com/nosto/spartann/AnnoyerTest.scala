@@ -26,10 +26,10 @@ class AnnoyerTest extends AnyFunSuite {
    *
    */
   test("that a-NN lookup via a Euclidean distance works") {
-    val embeddings: Iterator[MyEmbeddings] =
-      Iterator(MyEmbeddings("0", Seq(2.0f, 2.0f)),
-        MyEmbeddings("1", Seq(3.0f, 2.0f)),
-        MyEmbeddings("2", Seq(3.0f, 3.0f)))
+    val embeddings: Iterator[TestEmbeddings[String]] =
+      Iterator(TestEmbeddings("0", Seq(2.0f, 2.0f)),
+        TestEmbeddings("1", Seq(3.0f, 2.0f)),
+        TestEmbeddings("2", Seq(3.0f, 3.0f)))
 
     val result: Seq[AnnoyNeighbours[String]] = Seq(
       AnnoyNeighbours[String]("2", Seq(AnnoyRelation("1", 1.0f), AnnoyRelation("0", 1.4142135f))),
@@ -61,10 +61,10 @@ class AnnoyerTest extends AnyFunSuite {
    * </pre>
    */
   test("that a-NN lookup via an Angular distance works") {
-    val embeddings: Iterator[MyEmbeddings] =
-      Iterator(MyEmbeddings("0", Seq(2.0f, 1.0f, 0.0f)),
-        MyEmbeddings("1", Seq(1.0f, 2.0f, 0.0f)),
-        MyEmbeddings("2", Seq(0.0f, 0.0f, 1.0f)))
+    val embeddings: Iterator[TestEmbeddings[String]] =
+      Iterator(TestEmbeddings("0", Seq(2.0f, 1.0f, 0.0f)),
+        TestEmbeddings("1", Seq(1.0f, 2.0f, 0.0f)),
+        TestEmbeddings("2", Seq(0.0f, 0.0f, 1.0f)))
 
     val result: Seq[AnnoyNeighbours[String]] = Seq(
       AnnoyNeighbours[String]("2", Seq(AnnoyRelation("0", 1.4142135f), AnnoyRelation("1", 1.4142135f))),
@@ -96,10 +96,10 @@ class AnnoyerTest extends AnyFunSuite {
    * </pre>
    */
   test("that a-NN lookup via an Manhattan distance works") {
-    val embeddings: Iterator[MyEmbeddings] =
-      Iterator(MyEmbeddings("0", Seq(2.0f, 2.0f)),
-        MyEmbeddings("1", Seq(3.0f, 2.0f)),
-        MyEmbeddings("2", Seq(3.0f, 3.0f)))
+    val embeddings: Iterator[TestEmbeddings[String]] =
+      Iterator(TestEmbeddings("0", Seq(2.0f, 2.0f)),
+        TestEmbeddings("1", Seq(3.0f, 2.0f)),
+        TestEmbeddings("2", Seq(3.0f, 3.0f)))
 
     val result: Seq[AnnoyNeighbours[String]] = Seq(
       AnnoyNeighbours[String]("2", Seq(AnnoyRelation("1", 1.0f), AnnoyRelation("0", 2.0f))),
@@ -131,10 +131,10 @@ class AnnoyerTest extends AnyFunSuite {
    * </pre>
    */
   ignore("that a-NN lookup via an Hamming distance works") {
-    val embeddings: Iterator[MyEmbeddings] =
-      Iterator(MyEmbeddings("0", Seq(2.0f, 1.0f, 0.0f)),
-        MyEmbeddings("1", Seq(1.0f, 2.0f, 0.0f)),
-        MyEmbeddings("2", Seq(0.0f, 0.0f, 1.0f)))
+    val embeddings: Iterator[TestEmbeddings[String]] =
+      Iterator(TestEmbeddings("0", Seq(2.0f, 1.0f, 0.0f)),
+        TestEmbeddings("1", Seq(1.0f, 2.0f, 0.0f)),
+        TestEmbeddings("2", Seq(0.0f, 0.0f, 1.0f)))
 
     val result: Seq[AnnoyNeighbours[String]] = Seq(
       AnnoyNeighbours[String]("2", Seq(AnnoyRelation("1", 1.4142135f), AnnoyRelation("0", 1.4142135f))),

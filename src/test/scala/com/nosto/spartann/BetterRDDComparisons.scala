@@ -3,8 +3,7 @@ package com.nosto.spartann
 import com.holdenkarau.spark.testing.RDDComparisons
 import org.apache.spark.rdd.RDD
 import org.scalatest.funsuite.AnyFunSuite
-import org.scalatest.matchers.should.Matchers.convertToAnyShouldWrapper
-import org.scalatest.matchers.should.Matchers.not.be
+import org.scalatest.matchers.should.Matchers._
 
 import scala.reflect.ClassTag
 
