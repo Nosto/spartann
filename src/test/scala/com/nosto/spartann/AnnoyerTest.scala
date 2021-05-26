@@ -7,29 +7,29 @@ import org.scalatest.matchers.should.Matchers.convertToAnyShouldWrapper
 class AnnoyerTest extends AnyFunSuite {
 
   /**
-    * Test the lookups via the Euclidean distance works as expected. This test
-    * has been cannibalised from:
-    *
-    * https://github.com/spotify/annoy/blob/master/test/euclidean_index_test.py
-    *
-    * <pre>
-    * +-----+-----+-----+-----+-------------------------------------------------+
-    * | Id. | V¹  | V²  | V³  |                 Should Relate To                |
-    * +-----+-----+-----+-----+------------------------+------------------------+
-    * | 0   | 2.0 | 2.0 |     | 1 - 1.0000000000000000 | 2 - 1.4142135381698608 |
-    * +-----+-----+-----+-----+------------------------+------------------------+
-    * | 1   | 3.0 | 2.0 |     | 0 - 1.0000000000000000 | 2 - 1.0000000000000000 |
-    * +-----+-----+-----+-----+------------------------+------------------------+
-    * | 2   | 3.0 | 3.0 |     | 1 - 1.0000000000000000 | 0 - 1.4142135381698608 |
-    * +-----+-----+-----+-----+------------------------+------------------------+
-    * </pre>
-    *
-    */
+   * Test the lookups via the Euclidean distance works as expected. This test
+   * has been cannibalised from:
+   *
+   * https://github.com/spotify/annoy/blob/master/test/euclidean_index_test.py
+   *
+   * <pre>
+   * +-----+-----+-----+-----+-------------------------------------------------+
+   * | Id. | V¹  | V²  | V³  |                 Should Relate To                |
+   * +-----+-----+-----+-----+------------------------+------------------------+
+   * | 0   | 2.0 | 2.0 |     | 1 - 1.0000000000000000 | 2 - 1.4142135381698608 |
+   * +-----+-----+-----+-----+------------------------+------------------------+
+   * | 1   | 3.0 | 2.0 |     | 0 - 1.0000000000000000 | 2 - 1.0000000000000000 |
+   * +-----+-----+-----+-----+------------------------+------------------------+
+   * | 2   | 3.0 | 3.0 |     | 1 - 1.0000000000000000 | 0 - 1.4142135381698608 |
+   * +-----+-----+-----+-----+------------------------+------------------------+
+   * </pre>
+   *
+   */
   test("that a-NN lookup via a Euclidean distance works") {
     val embeddings: Iterator[MyEmbeddings] =
       Iterator(MyEmbeddings("0", Seq(2.0f, 2.0f)),
-               MyEmbeddings("1", Seq(3.0f, 2.0f)),
-               MyEmbeddings("2", Seq(3.0f, 3.0f)))
+        MyEmbeddings("1", Seq(3.0f, 2.0f)),
+        MyEmbeddings("2", Seq(3.0f, 3.0f)))
 
     val result: Seq[AnnoyNeighbours[String]] = Seq(
       AnnoyNeighbours[String]("2", Seq(AnnoyRelation("1", 1.0f), AnnoyRelation("0", 1.4142135f))),
@@ -43,28 +43,28 @@ class AnnoyerTest extends AnyFunSuite {
   }
 
   /**
-    * Test the lookups via the Angular distance works as expected. This test
-    * has been cannibalised from:
-    *
-    * https://github.com/spotify/annoy/blob/master/test/angular_index_test.py
-    *
-    * <pre>
-    * +-----+-----+-----+-----+-------------------------------------------------+
-    * | Id. | V¹  | V²  | V³  |                 Should Relate To                |
-    * +-----+-----+-----+-----+------------------------+------------------------+
-    * | 0   | 2.0 | 1.0 | 0.0 | 1 - 0.6324555277824402 | 2 - 1.4142135381698608 |
-    * +-----+-----+-----+-----+------------------------+------------------------+
-    * | 1   | 1.0 | 2.0 | 0.0 | 0 - 0.6324555277824402 | 2 - 1.4142135381698608 |
-    * +-----+-----+-----+-----+------------------------+------------------------+
-    * | 2   | 0.0 | 0.0 | 1.0 | 0 - 1.4142135381698608 | 1 - 1.4142135381698608 |
-    * +-----+-----+-----+-----+------------------------+------------------------+
-    * </pre>
-    */
+   * Test the lookups via the Angular distance works as expected. This test
+   * has been cannibalised from:
+   *
+   * https://github.com/spotify/annoy/blob/master/test/angular_index_test.py
+   *
+   * <pre>
+   * +-----+-----+-----+-----+-------------------------------------------------+
+   * | Id. | V¹  | V²  | V³  |                 Should Relate To                |
+   * +-----+-----+-----+-----+------------------------+------------------------+
+   * | 0   | 2.0 | 1.0 | 0.0 | 1 - 0.6324555277824402 | 2 - 1.4142135381698608 |
+   * +-----+-----+-----+-----+------------------------+------------------------+
+   * | 1   | 1.0 | 2.0 | 0.0 | 0 - 0.6324555277824402 | 2 - 1.4142135381698608 |
+   * +-----+-----+-----+-----+------------------------+------------------------+
+   * | 2   | 0.0 | 0.0 | 1.0 | 0 - 1.4142135381698608 | 1 - 1.4142135381698608 |
+   * +-----+-----+-----+-----+------------------------+------------------------+
+   * </pre>
+   */
   test("that a-NN lookup via an Angular distance works") {
     val embeddings: Iterator[MyEmbeddings] =
       Iterator(MyEmbeddings("0", Seq(2.0f, 1.0f, 0.0f)),
-               MyEmbeddings("1", Seq(1.0f, 2.0f, 0.0f)),
-               MyEmbeddings("2", Seq(0.0f, 0.0f, 1.0f)))
+        MyEmbeddings("1", Seq(1.0f, 2.0f, 0.0f)),
+        MyEmbeddings("2", Seq(0.0f, 0.0f, 1.0f)))
 
     val result: Seq[AnnoyNeighbours[String]] = Seq(
       AnnoyNeighbours[String]("2", Seq(AnnoyRelation("0", 1.4142135f), AnnoyRelation("1", 1.4142135f))),
@@ -78,28 +78,28 @@ class AnnoyerTest extends AnyFunSuite {
   }
 
   /**
-    * Test the lookups via the Manhattan distance works as expected. This test
-    * has been cannibalised from:
-    *
-    * https://github.com/spotify/annoy/blob/master/test/manhattan_index_test.py
-    *
-    * <pre>
-    * +-----+-----+-----+-----+-------------------------------------------------+
-    * | Id. | V¹  | V²  | V³  |                 Should Relate To                |
-    * +-----+-----+-----+-----+------------------------+------------------------+
-    * | 0   | 2.0 | 1.0 | 0.0 | 1 - 1.0000000000000000 | 0 - 2.0000000000000000 |
-    * +-----+-----+-----+-----+------------------------+------------------------+
-    * | 1   | 1.0 | 2.0 | 0.0 | 0 - 1.0000000000000000 | 2 - 1.0000000000000000 |
-    * +-----+-----+-----+-----+------------------------+------------------------+
-    * | 2   | 0.0 | 0.0 | 1.0 | 0 - 1.0000000000000000 | 1 - 2.0000000000000000 |
-    * +-----+-----+-----+-----+------------------------+------------------------+
-    * </pre>
-    */
+   * Test the lookups via the Manhattan distance works as expected. This test
+   * has been cannibalised from:
+   *
+   * https://github.com/spotify/annoy/blob/master/test/manhattan_index_test.py
+   *
+   * <pre>
+   * +-----+-----+-----+-----+-------------------------------------------------+
+   * | Id. | V¹  | V²  | V³  |                 Should Relate To                |
+   * +-----+-----+-----+-----+------------------------+------------------------+
+   * | 0   | 2.0 | 1.0 | 0.0 | 1 - 1.0000000000000000 | 0 - 2.0000000000000000 |
+   * +-----+-----+-----+-----+------------------------+------------------------+
+   * | 1   | 1.0 | 2.0 | 0.0 | 0 - 1.0000000000000000 | 2 - 1.0000000000000000 |
+   * +-----+-----+-----+-----+------------------------+------------------------+
+   * | 2   | 0.0 | 0.0 | 1.0 | 0 - 1.0000000000000000 | 1 - 2.0000000000000000 |
+   * +-----+-----+-----+-----+------------------------+------------------------+
+   * </pre>
+   */
   test("that a-NN lookup via an Manhattan distance works") {
     val embeddings: Iterator[MyEmbeddings] =
       Iterator(MyEmbeddings("0", Seq(2.0f, 2.0f)),
-               MyEmbeddings("1", Seq(3.0f, 2.0f)),
-               MyEmbeddings("2", Seq(3.0f, 3.0f)))
+        MyEmbeddings("1", Seq(3.0f, 2.0f)),
+        MyEmbeddings("2", Seq(3.0f, 3.0f)))
 
     val result: Seq[AnnoyNeighbours[String]] = Seq(
       AnnoyNeighbours[String]("2", Seq(AnnoyRelation("1", 1.0f), AnnoyRelation("0", 2.0f))),
@@ -113,28 +113,28 @@ class AnnoyerTest extends AnyFunSuite {
   }
 
   /**
-    * Test the lookups via the Hamming distance works as expected. This test
-    * has been cannibalised from:
-    *
-    * https://github.com/spotify/annoy/blob/master/test/hamming_index_test.py
-    *
-    * <pre>
-    * +-----+-----+-----+-----+-------------------------------------------------+
-    * | Id. | V¹  | V²  | V³  |                 Should Relate To                |
-    * +-----+-----+-----+-----+------------------------+------------------------+
-    * | 0   | 2.0 | 1.0 | 0.0 | 1 - 0.6324555277824402 | 2 - 1.4142135381698608 |
-    * +-----+-----+-----+-----+------------------------+------------------------+
-    * | 1   | 1.0 | 2.0 | 0.0 | 0 - 0.6324555277824402 | 2 - 1.4142135381698608 |
-    * +-----+-----+-----+-----+------------------------+------------------------+
-    * | 2   | 0.0 | 0.0 | 1.0 | 0 - 1.4142135381698608 | 1 - 1.4142135381698608 |
-    * +-----+-----+-----+-----+------------------------+------------------------+
-    * </pre>
-    */
+   * Test the lookups via the Hamming distance works as expected. This test
+   * has been cannibalised from:
+   *
+   * https://github.com/spotify/annoy/blob/master/test/hamming_index_test.py
+   *
+   * <pre>
+   * +-----+-----+-----+-----+-------------------------------------------------+
+   * | Id. | V¹  | V²  | V³  |                 Should Relate To                |
+   * +-----+-----+-----+-----+------------------------+------------------------+
+   * | 0   | 2.0 | 1.0 | 0.0 | 1 - 0.6324555277824402 | 2 - 1.4142135381698608 |
+   * +-----+-----+-----+-----+------------------------+------------------------+
+   * | 1   | 1.0 | 2.0 | 0.0 | 0 - 0.6324555277824402 | 2 - 1.4142135381698608 |
+   * +-----+-----+-----+-----+------------------------+------------------------+
+   * | 2   | 0.0 | 0.0 | 1.0 | 0 - 1.4142135381698608 | 1 - 1.4142135381698608 |
+   * +-----+-----+-----+-----+------------------------+------------------------+
+   * </pre>
+   */
   ignore("that a-NN lookup via an Hamming distance works") {
     val embeddings: Iterator[MyEmbeddings] =
       Iterator(MyEmbeddings("0", Seq(2.0f, 1.0f, 0.0f)),
-               MyEmbeddings("1", Seq(1.0f, 2.0f, 0.0f)),
-               MyEmbeddings("2", Seq(0.0f, 0.0f, 1.0f)))
+        MyEmbeddings("1", Seq(1.0f, 2.0f, 0.0f)),
+        MyEmbeddings("2", Seq(0.0f, 0.0f, 1.0f)))
 
     val result: Seq[AnnoyNeighbours[String]] = Seq(
       AnnoyNeighbours[String]("2", Seq(AnnoyRelation("1", 1.4142135f), AnnoyRelation("0", 1.4142135f))),

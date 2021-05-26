@@ -103,141 +103,6 @@ object Using {
     Using.resource(resource)(f)
   }
 
-  /** A resource manager.
-   *
-   * Resources can be registered with the manager by calling [[acquire `acquire`]];
-   * such resources will be released in reverse order of their acquisition
-   * when the manager is closed, regardless of any exceptions thrown
-   * during use.
-   *
-   * $suppressionBehavior
-   *
-   * @note It is recommended for API designers to require an implicit `Manager`
-   *       for the creation of custom resources, and to call `acquire` during those
-   *       resources' construction. Doing so guarantees that the resource ''must'' be
-   *       automatically managed, and makes it impossible to forget to do so.
-   *
-   *
-   *       Example:
-   *       {{{
-   *       class SafeFileReader(file: File)(implicit manager: Using.Manager)
-   *         extends BufferedReader(new FileReader(file)) {
-   *
-   *         def this(fileName: String)(implicit manager: Using.Manager) = this(new File(fileName))
-   *
-   *         manager.acquire(this)
-   *       }
-   *       }}}
-   */
-  final class Manager private {
-    import Manager._
-
-    private var closed = false
-    private[this] var resources: List[Resource[_]] = Nil
-
-    /** Registers the specified resource with this manager, so that
-     * the resource is released when the manager is closed, and then
-     * returns the (unmodified) resource.
-     */
-    def apply[R: Releasable](resource: R): R = {
-      acquire(resource)
-      resource
-    }
-
-    /** Registers the specified resource with this manager, so that
-     * the resource is released when the manager is closed.
-     */
-    def acquire[R: Releasable](resource: R): Unit = {
-      if (resource == null) throw new NullPointerException()
-      if (closed)
-        throw new IllegalStateException("Manager has already been closed")
-      resources = new Resource(resource) :: resources
-    }
-
-    private def manage[A](op: Manager => A): A = {
-      var toThrow: Throwable = null
-      try {
-        op(this)
-      } catch {
-        case t: Throwable =>
-          toThrow = t
-          null.asInstanceOf[A] // compiler doesn't know `finally` will throw
-      } finally {
-        closed = true
-        var rs = resources
-        resources = null // allow GC, in case something is holding a reference to `this`
-        while (rs.nonEmpty) {
-          val resource = rs.head
-          rs = rs.tail
-          try resource.release()
-          catch {
-            case t: Throwable =>
-              if (toThrow == null) toThrow = t
-              else toThrow = preferentiallySuppress(toThrow, t)
-          }
-        }
-        if (toThrow != null) throw toThrow
-      }
-    }
-  }
-
-  object Manager {
-
-    /** Performs an operation using a `Manager`, then closes the `Manager`,
-     * releasing its resources (in reverse order of acquisition).
-     *
-     * Example:
-     * {{{
-     * val lines = Using.Manager { use =>
-     *   use(new BufferedReader(new FileReader("file.txt"))).lines()
-     * }
-     * }}}
-     *
-     * If using resources which require an implicit `Manager` as a parameter,
-     * this method should be invoked with an `implicit` modifier before the function
-     * parameter:
-     *
-     * Example:
-     * {{{
-     * val lines = Using.Manager { implicit use =>
-     *   new SafeFileReader("file.txt").lines()
-     * }
-     * }}}
-     *
-     * See the main doc for [[Using `Using`]] for full details of suppression behavior.
-     *
-     * @param op the operation to perform using the manager
-     * @tparam A the return type of the operation
-     * @return a [[Try]] containing an exception if one or more were thrown,
-     *         or the result of the operation if no exceptions were thrown
-     */
-    def apply[A](op: Manager => A): Try[A] = Try { (new Manager).manage(op) }
-
-    private final class Resource[R](resource: R)(
-      implicit releasable: Releasable[R]) {
-      def release(): Unit = releasable.release(resource)
-    }
-  }
-
-  private def preferentiallySuppress(primary: Throwable,
-                                     secondary: Throwable): Throwable = {
-    def score(t: Throwable): Int = t match {
-      case _: VirtualMachineError => 4
-      case _: LinkageError => 3
-      case _: InterruptedException | _: ThreadDeath => 2
-      case _: ControlThrowable => 0
-      case e if !NonFatal(e) =>
-        1 // in case this method gets out of sync with NonFatal
-      case _ => -1
-    }
-    @inline def suppress(t: Throwable, suppressed: Throwable): Throwable = {
-      t.addSuppressed(suppressed); t
-    }
-
-    if (score(secondary) > score(primary)) suppress(secondary, primary)
-    else suppress(primary, secondary)
-  }
-
   /** Performs an operation using a resource, and then releases the resource,
    * even if the operation throws an exception. This method behaves similarly
    * to Java's try-with-resources.
@@ -272,6 +137,27 @@ object Using {
         } finally throw toThrow
       }
     }
+  }
+
+  private def preferentiallySuppress(primary: Throwable,
+                                     secondary: Throwable): Throwable = {
+    def score(t: Throwable): Int = t match {
+      case _: VirtualMachineError => 4
+      case _: LinkageError => 3
+      case _: InterruptedException | _: ThreadDeath => 2
+      case _: ControlThrowable => 0
+      case e if !NonFatal(e) =>
+        1 // in case this method gets out of sync with NonFatal
+      case _ => -1
+    }
+
+    @inline def suppress(t: Throwable, suppressed: Throwable): Throwable = {
+      t.addSuppressed(suppressed);
+      t
+    }
+
+    if (score(secondary) > score(primary)) suppress(secondary, primary)
+    else suppress(primary, secondary)
   }
 
   /** Performs an operation using two resources, and then releases the resources
@@ -386,6 +272,125 @@ object Using {
 
     /** Releases the specified resource. */
     def release(resource: R): Unit
+  }
+
+  /** A resource manager.
+   *
+   * Resources can be registered with the manager by calling [[acquire `acquire`]];
+   * such resources will be released in reverse order of their acquisition
+   * when the manager is closed, regardless of any exceptions thrown
+   * during use.
+   *
+   * $suppressionBehavior
+   *
+   * @note It is recommended for API designers to require an implicit `Manager`
+   *       for the creation of custom resources, and to call `acquire` during those
+   *       resources' construction. Doing so guarantees that the resource ''must'' be
+   *       automatically managed, and makes it impossible to forget to do so.
+   *
+   *
+   *       Example:
+   * {{{
+   *       class SafeFileReader(file: File)(implicit manager: Using.Manager)
+   *         extends BufferedReader(new FileReader(file)) {
+   *
+   *         def this(fileName: String)(implicit manager: Using.Manager) = this(new File(fileName))
+   *
+   *         manager.acquire(this)
+   *       }
+   * }}}
+   */
+  final class Manager private {
+
+    import Manager._
+
+    private var closed = false
+    private[this] var resources: List[Resource[_]] = Nil
+
+    /** Registers the specified resource with this manager, so that
+     * the resource is released when the manager is closed, and then
+     * returns the (unmodified) resource.
+     */
+    def apply[R: Releasable](resource: R): R = {
+      acquire(resource)
+      resource
+    }
+
+    /** Registers the specified resource with this manager, so that
+     * the resource is released when the manager is closed.
+     */
+    def acquire[R: Releasable](resource: R): Unit = {
+      if (resource == null) throw new NullPointerException()
+      if (closed)
+        throw new IllegalStateException("Manager has already been closed")
+      resources = new Resource(resource) :: resources
+    }
+
+    private def manage[A](op: Manager => A): A = {
+      var toThrow: Throwable = null
+      try {
+        op(this)
+      } catch {
+        case t: Throwable =>
+          toThrow = t
+          null.asInstanceOf[A] // compiler doesn't know `finally` will throw
+      } finally {
+        closed = true
+        var rs = resources
+        resources = null // allow GC, in case something is holding a reference to `this`
+        while (rs.nonEmpty) {
+          val resource = rs.head
+          rs = rs.tail
+          try resource.release()
+          catch {
+            case t: Throwable =>
+              if (toThrow == null) toThrow = t
+              else toThrow = preferentiallySuppress(toThrow, t)
+          }
+        }
+        if (toThrow != null) throw toThrow
+      }
+    }
+  }
+
+  object Manager {
+
+    /** Performs an operation using a `Manager`, then closes the `Manager`,
+     * releasing its resources (in reverse order of acquisition).
+     *
+     * Example:
+     * {{{
+     * val lines = Using.Manager { use =>
+     *   use(new BufferedReader(new FileReader("file.txt"))).lines()
+     * }
+     * }}}
+     *
+     * If using resources which require an implicit `Manager` as a parameter,
+     * this method should be invoked with an `implicit` modifier before the function
+     * parameter:
+     *
+     * Example:
+     * {{{
+     * val lines = Using.Manager { implicit use =>
+     *   new SafeFileReader("file.txt").lines()
+     * }
+     * }}}
+     *
+     * See the main doc for [[Using `Using`]] for full details of suppression behavior.
+     *
+     * @param op the operation to perform using the manager
+     * @tparam A the return type of the operation
+     * @return a [[Try]] containing an exception if one or more were thrown,
+     *         or the result of the operation if no exceptions were thrown
+     */
+    def apply[A](op: Manager => A): Try[A] = Try {
+      (new Manager).manage(op)
+    }
+
+    private final class Resource[R](resource: R)(
+      implicit releasable: Releasable[R]) {
+      def release(): Unit = releasable.release(resource)
+    }
   }
 
   object Releasable {

@@ -7,20 +7,20 @@ import scala.collection.mutable
 import scala.util.{Failure, Success, Using}
 
 /**
-  * A wrapper for Annoy that consumes an iterator of embedding and returns an
-  * iterator of items with the "n" closest related items along with the scores.
-  *
-  * @author mridang
-  */
+ * A wrapper for Annoy that consumes an iterator of embedding and returns an
+ * iterator of items with the "n" closest related items along with the scores.
+ *
+ * @author mridang
+ */
 object Annoyer extends LazyLogging {
 
   /**
-    * Created an Annoy index from an iterator by conveniently zipping it
-    * for you.
-    *
-    * @author mridang
-    * @see `com.nosto.product.image.similarity.annoy.Annoyer.create`
-    */
+   * Created an Annoy index from an iterator by conveniently zipping it
+   * for you.
+   *
+   * @author mridang
+   * @see `com.nosto.product.image.similarity.annoy.Annoyer.create`
+   */
   def createFor[IdType](allItems: Iterator[Embeddings[IdType]], annoyConfig: AnnoyConfig):
   Iterator[Neighbour[IdType]] = {
 
@@ -35,30 +35,29 @@ object Annoyer extends LazyLogging {
   }
 
   /**
-    * Creates an Annoy index from a zipped iterator and returns a new iterator
-    * with "n" nearest neighbours.
-    * <p>
-    * Note: The iterator MUST be a zipped iterator. You cannot substitute it by
-    * running the ids through a hash function like MurMur3. While a MurMur3 hash
-    * function will yield ints/longs - Annoy requires the items to be indexed by
-    * a running counter. The index insertion order is not relevant and therefore,
-    * the iterator need not be ordered.
-    * </p>
-    *
-    * <p>
-    * If an iterator of "n" items with "m" embeddings each is provided to this
-    * method, it will yield an iterator of "n" items with the closest <= "o"
-    * items (where "o" is defined by the maxResults parameter).
-    * </p>
-    *
-    *
-    * @author mridang
-    * @param allItems the zipped iterator of if the ids and associated embeddings.
-    * @param annoyConfig the annoy configuration to be used for the index
-    * @param verbose if verbose logging is to be done. default disabled.
-    * @param maxResults the number of results to be returned. default 10.
-    * @return an iterator of all the entries with the "n" nearest neighbours.
-    */
+   * Creates an Annoy index from a zipped iterator and returns a new iterator
+   * with "n" nearest neighbours.
+   * <p>
+   * Note: The iterator MUST be a zipped iterator. You cannot substitute it by
+   * running the ids through a hash function like MurMur3. While a MurMur3 hash
+   * function will yield ints/longs - Annoy requires the items to be indexed by
+   * a running counter. The index insertion order is not relevant and therefore,
+   * the iterator need not be ordered.
+   * </p>
+   *
+   * <p>
+   * If an iterator of "n" items with "m" embeddings each is provided to this
+   * method, it will yield an iterator of "n" items with the closest <= "o"
+   * items (where "o" is defined by the maxResults parameter).
+   * </p>
+   *
+   * @author mridang
+   * @param allItems    the zipped iterator of if the ids and associated embeddings.
+   * @param annoyConfig the annoy configuration to be used for the index
+   * @param verbose     if verbose logging is to be done. default disabled.
+   * @param maxResults  the number of results to be returned. default 10.
+   * @return an iterator of all the entries with the "n" nearest neighbours.
+   */
   def create[IdType](allItems: Iterator[(Long, Embeddings[IdType])],
                      annoyConfig: AnnoyConfig, verbose: Boolean = false, //TODO:
                      maxResults: Int = 10):
@@ -94,27 +93,26 @@ object Annoyer extends LazyLogging {
     // and can be removed after the 2.13 migration.
     //
     // Refer to: https://www.baeldung.com/scala/try-with-resources
-    Using(new BetterAnnoy(annoyIndex, annoyConfig.numDimensions, annoyConfig.metric))
-    { annIndex: BetterAnnoy => {
-        indexedItems.map { entry: (Int, IdType) =>
-          val relatedItems: Seq[AnnoyRelation[IdType]] = annIndex
-            .queryAll(entry._1, maxResults)
-            .filter { row: (Int, Float) =>
-              row._1 != entry._1
+    Using(new BetterAnnoy(annoyIndex, annoyConfig.numDimensions, annoyConfig.metric)) { annIndex: BetterAnnoy => {
+      indexedItems.map { entry: (Int, IdType) =>
+        val relatedItems: Seq[AnnoyRelation[IdType]] = annIndex
+          .queryAll(entry._1, maxResults)
+          .filter { row: (Int, Float) =>
+            row._1 != entry._1
+          }
+          .map { row: (Int, Float) =>
+            indexedItems.get(row._1) match {
+              case Some(value: IdType) => (value, row._2)
+              case None => throw new RuntimeException
             }
-            .map { row: (Int, Float) =>
-              indexedItems.get(row._1) match {
-                case Some(value: IdType) => (value, row._2)
-                case None => throw new RuntimeException
-              }
-            }
-            .map { row: (IdType, Float) =>
-              AnnoyRelation(row._1, row._2)
-            }
+          }
+          .map { row: (IdType, Float) =>
+            AnnoyRelation(row._1, row._2)
+          }
 
-          AnnoyNeighbours[IdType](entry._2, relatedItems)
-        }
+        AnnoyNeighbours[IdType](entry._2, relatedItems)
       }
+    }
     } match {
       case Success(n: Iterable[Neighbour[IdType]]) => n.iterator
       // This should not happen, ever; but let's just throw up anyways.
