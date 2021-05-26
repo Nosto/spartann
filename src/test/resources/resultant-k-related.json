@@ -1,5100 +1,4100 @@
 [
   {
-    "merchant": "test",
-    "product_id": "92",
-    "product_relations": [
+    "id": "92",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "20",
+        "id": "20",
         "score": 0.43293053
       },
       {
-        "merchant": "test",
-        "product_id": "13",
+        "id": "13",
         "score": 0.49089873
       },
       {
-        "merchant": "test",
-        "product_id": "68",
+        "id": "68",
         "score": 0.5366005
       },
       {
-        "merchant": "test",
-        "product_id": "91",
+        "id": "91",
         "score": 0.55286145
       },
       {
-        "merchant": "test",
-        "product_id": "26",
+        "id": "26",
         "score": 0.6325648
       },
       {
-        "merchant": "test",
-        "product_id": "4",
+        "id": "4",
         "score": 0.6676512
       },
       {
-        "merchant": "test",
-        "product_id": "96",
+        "id": "96",
         "score": 0.69704497
       },
       {
-        "merchant": "test",
-        "product_id": "6",
+        "id": "6",
         "score": 0.71761096
       },
       {
-        "merchant": "test",
-        "product_id": "12",
+        "id": "12",
         "score": 0.7320425
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "83",
-    "product_relations": [
+    "id": "83",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "2",
+        "id": "2",
         "score": 0.2848716
       },
       {
-        "merchant": "test",
-        "product_id": "48",
+        "id": "48",
         "score": 0.36208823
       },
       {
-        "merchant": "test",
-        "product_id": "46",
+        "id": "46",
         "score": 0.41748598
       },
       {
-        "merchant": "test",
-        "product_id": "33",
+        "id": "33",
         "score": 0.43288755
       },
       {
-        "merchant": "test",
-        "product_id": "55",
+        "id": "55",
         "score": 0.44470695
       },
       {
-        "merchant": "test",
-        "product_id": "62",
+        "id": "62",
         "score": 0.4567652
       },
       {
-        "merchant": "test",
-        "product_id": "65",
+        "id": "65",
         "score": 0.5043246
       },
       {
-        "merchant": "test",
-        "product_id": "30",
+        "id": "30",
         "score": 0.51753056
       },
       {
-        "merchant": "test",
-        "product_id": "89",
+        "id": "89",
         "score": 0.54563326
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "23",
-    "product_relations": [
+    "id": "23",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "18",
+        "id": "18",
         "score": 0.3853868
       },
       {
-        "merchant": "test",
-        "product_id": "14",
+        "id": "14",
         "score": 0.38793063
       },
       {
-        "merchant": "test",
-        "product_id": "71",
+        "id": "71",
         "score": 0.39180323
       },
       {
-        "merchant": "test",
-        "product_id": "88",
+        "id": "88",
         "score": 0.3999213
       },
       {
-        "merchant": "test",
-        "product_id": "19",
+        "id": "19",
         "score": 0.43047228
       },
       {
-        "merchant": "test",
-        "product_id": "24",
+        "id": "24",
         "score": 0.4403921
       },
       {
-        "merchant": "test",
-        "product_id": "16",
+        "id": "16",
         "score": 0.4565069
       },
       {
-        "merchant": "test",
-        "product_id": "67",
+        "id": "67",
         "score": 0.5351786
       },
       {
-        "merchant": "test",
-        "product_id": "98",
+        "id": "98",
         "score": 0.6259631
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "95",
-    "product_relations": [
+    "id": "95",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "11",
+        "id": "11",
         "score": 0.35934612
       },
       {
-        "merchant": "test",
-        "product_id": "6",
+        "id": "6",
         "score": 0.3807003
       },
       {
-        "merchant": "test",
-        "product_id": "66",
+        "id": "66",
         "score": 0.4236613
       },
       {
-        "merchant": "test",
-        "product_id": "91",
+        "id": "91",
         "score": 0.43622485
       },
       {
-        "merchant": "test",
-        "product_id": "68",
+        "id": "68",
         "score": 0.4955578
       },
       {
-        "merchant": "test",
-        "product_id": "41",
+        "id": "41",
         "score": 0.5101018
       },
       {
-        "merchant": "test",
-        "product_id": "7",
+        "id": "7",
         "score": 0.523039
       },
       {
-        "merchant": "test",
-        "product_id": "27",
+        "id": "27",
         "score": 0.5296768
       },
       {
-        "merchant": "test",
-        "product_id": "56",
+        "id": "56",
         "score": 0.53371996
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "77",
-    "product_relations": [
+    "id": "77",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "5",
+        "id": "5",
         "score": 0.3871832
       },
       {
-        "merchant": "test",
-        "product_id": "67",
+        "id": "67",
         "score": 0.38920975
       },
       {
-        "merchant": "test",
-        "product_id": "28",
+        "id": "28",
         "score": 0.4228403
       },
       {
-        "merchant": "test",
-        "product_id": "74",
+        "id": "74",
         "score": 0.42441612
       },
       {
-        "merchant": "test",
-        "product_id": "14",
+        "id": "14",
         "score": 0.43598658
       },
       {
-        "merchant": "test",
-        "product_id": "49",
+        "id": "49",
         "score": 0.43937758
       },
       {
-        "merchant": "test",
-        "product_id": "80",
+        "id": "80",
         "score": 0.56931704
       },
       {
-        "merchant": "test",
-        "product_id": "9",
+        "id": "9",
         "score": 0.5766036
       },
       {
-        "merchant": "test",
-        "product_id": "70",
+        "id": "70",
         "score": 0.58445895
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "86",
-    "product_relations": [
+    "id": "86",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "28",
+        "id": "28",
         "score": 0.3878272
       },
       {
-        "merchant": "test",
-        "product_id": "16",
+        "id": "16",
         "score": 0.49051666
       },
       {
-        "merchant": "test",
-        "product_id": "80",
+        "id": "80",
         "score": 0.5662461
       },
       {
-        "merchant": "test",
-        "product_id": "19",
+        "id": "19",
         "score": 0.572202
       },
       {
-        "merchant": "test",
-        "product_id": "18",
+        "id": "18",
         "score": 0.6061548
       },
       {
-        "merchant": "test",
-        "product_id": "70",
+        "id": "70",
         "score": 0.63936
       },
       {
-        "merchant": "test",
-        "product_id": "77",
+        "id": "77",
         "score": 0.6458711
       },
       {
-        "merchant": "test",
-        "product_id": "61",
+        "id": "61",
         "score": 0.653527
       },
       {
-        "merchant": "test",
-        "product_id": "88",
+        "id": "88",
         "score": 0.65632915
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "50",
-    "product_relations": [
+    "id": "50",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "38",
+        "id": "38",
         "score": 0.3743285
       },
       {
-        "merchant": "test",
-        "product_id": "80",
+        "id": "80",
         "score": 0.44459677
       },
       {
-        "merchant": "test",
-        "product_id": "61",
+        "id": "61",
         "score": 0.49739516
       },
       {
-        "merchant": "test",
-        "product_id": "56",
+        "id": "56",
         "score": 0.50200725
       },
       {
-        "merchant": "test",
-        "product_id": "41",
+        "id": "41",
         "score": 0.5413037
       },
       {
-        "merchant": "test",
-        "product_id": "49",
+        "id": "49",
         "score": 0.5441571
       },
       {
-        "merchant": "test",
-        "product_id": "57",
+        "id": "57",
         "score": 0.5658745
       },
       {
-        "merchant": "test",
-        "product_id": "9",
+        "id": "9",
         "score": 0.57771105
       },
       {
-        "merchant": "test",
-        "product_id": "5",
+        "id": "5",
         "score": 0.58145374
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "59",
-    "product_relations": [
+    "id": "59",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "45",
+        "id": "45",
         "score": 0.35627934
       },
       {
-        "merchant": "test",
-        "product_id": "91",
+        "id": "91",
         "score": 0.45535398
       },
       {
-        "merchant": "test",
-        "product_id": "48",
+        "id": "48",
         "score": 0.4645573
       },
       {
-        "merchant": "test",
-        "product_id": "27",
+        "id": "27",
         "score": 0.47434345
       },
       {
-        "merchant": "test",
-        "product_id": "89",
+        "id": "89",
         "score": 0.50850934
       },
       {
-        "merchant": "test",
-        "product_id": "7",
+        "id": "7",
         "score": 0.5133154
       },
       {
-        "merchant": "test",
-        "product_id": "33",
+        "id": "33",
         "score": 0.55999357
       },
       {
-        "merchant": "test",
-        "product_id": "43",
+        "id": "43",
         "score": 0.5612907
       },
       {
-        "merchant": "test",
-        "product_id": "75",
+        "id": "75",
         "score": 0.5745058
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "41",
-    "product_relations": [
+    "id": "41",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "57",
+        "id": "57",
         "score": 0.2932289
       },
       {
-        "merchant": "test",
-        "product_id": "34",
+        "id": "34",
         "score": 0.34712917
       },
       {
-        "merchant": "test",
-        "product_id": "61",
+        "id": "61",
         "score": 0.37145784
       },
       {
-        "merchant": "test",
-        "product_id": "68",
+        "id": "68",
         "score": 0.42393547
       },
       {
-        "merchant": "test",
-        "product_id": "56",
+        "id": "56",
         "score": 0.45604154
       },
       {
-        "merchant": "test",
-        "product_id": "44",
+        "id": "44",
         "score": 0.4659661
       },
       {
-        "merchant": "test",
-        "product_id": "38",
+        "id": "38",
         "score": 0.4710491
       },
       {
-        "merchant": "test",
-        "product_id": "95",
+        "id": "95",
         "score": 0.5101018
       },
       {
-        "merchant": "test",
-        "product_id": "20",
+        "id": "20",
         "score": 0.5119474
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "32",
-    "product_relations": [
+    "id": "32",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "81",
+        "id": "81",
         "score": 0.3638913
       },
       {
-        "merchant": "test",
-        "product_id": "25",
+        "id": "25",
         "score": 0.536115
       },
       {
-        "merchant": "test",
-        "product_id": "54",
+        "id": "54",
         "score": 0.54463154
       },
       {
-        "merchant": "test",
-        "product_id": "33",
+        "id": "33",
         "score": 0.5482012
       },
       {
-        "merchant": "test",
-        "product_id": "58",
+        "id": "58",
         "score": 0.5766781
       },
       {
-        "merchant": "test",
-        "product_id": "11",
+        "id": "11",
         "score": 0.5902447
       },
       {
-        "merchant": "test",
-        "product_id": "22",
+        "id": "22",
         "score": 0.59621054
       },
       {
-        "merchant": "test",
-        "product_id": "8",
+        "id": "8",
         "score": 0.65377945
       },
       {
-        "merchant": "test",
-        "product_id": "1",
+        "id": "1",
         "score": 0.69462144
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "68",
-    "product_relations": [
+    "id": "68",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "91",
+        "id": "91",
         "score": 0.4038759
       },
       {
-        "merchant": "test",
-        "product_id": "11",
+        "id": "11",
         "score": 0.4187831
       },
       {
-        "merchant": "test",
-        "product_id": "41",
+        "id": "41",
         "score": 0.42393547
       },
       {
-        "merchant": "test",
-        "product_id": "20",
+        "id": "20",
         "score": 0.4477577
       },
       {
-        "merchant": "test",
-        "product_id": "66",
+        "id": "66",
         "score": 0.48018068
       },
       {
-        "merchant": "test",
-        "product_id": "95",
+        "id": "95",
         "score": 0.4955578
       },
       {
-        "merchant": "test",
-        "product_id": "26",
+        "id": "26",
         "score": 0.49930876
       },
       {
-        "merchant": "test",
-        "product_id": "21",
+        "id": "21",
         "score": 0.51278293
       },
       {
-        "merchant": "test",
-        "product_id": "6",
+        "id": "6",
         "score": 0.5353914
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "53",
-    "product_relations": [
+    "id": "53",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "94",
+        "id": "94",
         "score": 0.31045476
       },
       {
-        "merchant": "test",
-        "product_id": "10",
+        "id": "10",
         "score": 0.37739745
       },
       {
-        "merchant": "test",
-        "product_id": "62",
+        "id": "62",
         "score": 0.3885186
       },
       {
-        "merchant": "test",
-        "product_id": "40",
+        "id": "40",
         "score": 0.44230118
       },
       {
-        "merchant": "test",
-        "product_id": "85",
+        "id": "85",
         "score": 0.512191
       },
       {
-        "merchant": "test",
-        "product_id": "69",
+        "id": "69",
         "score": 0.5502216
       },
       {
-        "merchant": "test",
-        "product_id": "90",
+        "id": "90",
         "score": 0.5544524
       },
       {
-        "merchant": "test",
-        "product_id": "54",
+        "id": "54",
         "score": 0.5822229
       },
       {
-        "merchant": "test",
-        "product_id": "72",
+        "id": "72",
         "score": 0.5872621
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "62",
-    "product_relations": [
+    "id": "62",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "53",
+        "id": "53",
         "score": 0.3885186
       },
       {
-        "merchant": "test",
-        "product_id": "2",
+        "id": "2",
         "score": 0.4090318
       },
       {
-        "merchant": "test",
-        "product_id": "85",
+        "id": "85",
         "score": 0.4401975
       },
       {
-        "merchant": "test",
-        "product_id": "87",
+        "id": "87",
         "score": 0.4552058
       },
       {
-        "merchant": "test",
-        "product_id": "83",
+        "id": "83",
         "score": 0.4567652
       },
       {
-        "merchant": "test",
-        "product_id": "69",
+        "id": "69",
         "score": 0.48280662
       },
       {
-        "merchant": "test",
-        "product_id": "94",
+        "id": "94",
         "score": 0.49113992
       },
       {
-        "merchant": "test",
-        "product_id": "46",
+        "id": "46",
         "score": 0.5145751
       },
       {
-        "merchant": "test",
-        "product_id": "90",
+        "id": "90",
         "score": 0.5199006
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "35",
-    "product_relations": [
+    "id": "35",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "36",
+        "id": "36",
         "score": 0.31501833
       },
       {
-        "merchant": "test",
-        "product_id": "48",
+        "id": "48",
         "score": 0.36376348
       },
       {
-        "merchant": "test",
-        "product_id": "29",
+        "id": "29",
         "score": 0.3706333
       },
       {
-        "merchant": "test",
-        "product_id": "97",
+        "id": "97",
         "score": 0.37638524
       },
       {
-        "merchant": "test",
-        "product_id": "39",
+        "id": "39",
         "score": 0.37692183
       },
       {
-        "merchant": "test",
-        "product_id": "15",
+        "id": "15",
         "score": 0.43565428
       },
       {
-        "merchant": "test",
-        "product_id": "89",
+        "id": "89",
         "score": 0.44449273
       },
       {
-        "merchant": "test",
-        "product_id": "43",
+        "id": "43",
         "score": 0.46568596
       },
       {
-        "merchant": "test",
-        "product_id": "21",
+        "id": "21",
         "score": 0.46954098
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "44",
-    "product_relations": [
+    "id": "44",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "41",
+        "id": "41",
         "score": 0.4659661
       },
       {
-        "merchant": "test",
-        "product_id": "9",
+        "id": "9",
         "score": 0.48767656
       },
       {
-        "merchant": "test",
-        "product_id": "34",
+        "id": "34",
         "score": 0.4877252
       },
       {
-        "merchant": "test",
-        "product_id": "56",
+        "id": "56",
         "score": 0.48991382
       },
       {
-        "merchant": "test",
-        "product_id": "57",
+        "id": "57",
         "score": 0.5240901
       },
       {
-        "merchant": "test",
-        "product_id": "61",
+        "id": "61",
         "score": 0.52780074
       },
       {
-        "merchant": "test",
-        "product_id": "38",
+        "id": "38",
         "score": 0.56407326
       },
       {
-        "merchant": "test",
-        "product_id": "50",
+        "id": "50",
         "score": 0.5953762
       },
       {
-        "merchant": "test",
-        "product_id": "20",
+        "id": "20",
         "score": 0.60971254
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "8",
-    "product_relations": [
+    "id": "8",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "36",
+        "id": "36",
         "score": 0.2946378
       },
       {
-        "merchant": "test",
-        "product_id": "55",
+        "id": "55",
         "score": 0.41553143
       },
       {
-        "merchant": "test",
-        "product_id": "3",
+        "id": "3",
         "score": 0.4210168
       },
       {
-        "merchant": "test",
-        "product_id": "33",
+        "id": "33",
         "score": 0.46374196
       },
       {
-        "merchant": "test",
-        "product_id": "60",
+        "id": "60",
         "score": 0.46851334
       },
       {
-        "merchant": "test",
-        "product_id": "76",
+        "id": "76",
         "score": 0.4707337
       },
       {
-        "merchant": "test",
-        "product_id": "15",
+        "id": "15",
         "score": 0.4754523
       },
       {
-        "merchant": "test",
-        "product_id": "64",
+        "id": "64",
         "score": 0.47858638
       },
       {
-        "merchant": "test",
-        "product_id": "98",
+        "id": "98",
         "score": 0.51676255
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "17",
-    "product_relations": [
+    "id": "17",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "52",
+        "id": "52",
         "score": 0.44597542
       },
       {
-        "merchant": "test",
-        "product_id": "82",
+        "id": "82",
         "score": 0.4878111
       },
       {
-        "merchant": "test",
-        "product_id": "16",
+        "id": "16",
         "score": 0.5136334
       },
       {
-        "merchant": "test",
-        "product_id": "81",
+        "id": "81",
         "score": 0.54295087
       },
       {
-        "merchant": "test",
-        "product_id": "3",
+        "id": "3",
         "score": 0.5604897
       },
       {
-        "merchant": "test",
-        "product_id": "18",
+        "id": "18",
         "score": 0.59775716
       },
       {
-        "merchant": "test",
-        "product_id": "19",
+        "id": "19",
         "score": 0.65174097
       },
       {
-        "merchant": "test",
-        "product_id": "10",
+        "id": "10",
         "score": 0.6664109
       },
       {
-        "merchant": "test",
-        "product_id": "88",
+        "id": "88",
         "score": 0.6861191
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "26",
-    "product_relations": [
+    "id": "26",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "91",
+        "id": "91",
         "score": 0.41106352
       },
       {
-        "merchant": "test",
-        "product_id": "73",
+        "id": "73",
         "score": 0.43014544
       },
       {
-        "merchant": "test",
-        "product_id": "68",
+        "id": "68",
         "score": 0.49930876
       },
       {
-        "merchant": "test",
-        "product_id": "37",
+        "id": "37",
         "score": 0.5472201
       },
       {
-        "merchant": "test",
-        "product_id": "95",
+        "id": "95",
         "score": 0.5787014
       },
       {
-        "merchant": "test",
-        "product_id": "92",
+        "id": "92",
         "score": 0.6325648
       },
       {
-        "merchant": "test",
-        "product_id": "20",
+        "id": "20",
         "score": 0.64933556
       },
       {
-        "merchant": "test",
-        "product_id": "51",
+        "id": "51",
         "score": 0.6501926
       },
       {
-        "merchant": "test",
-        "product_id": "58",
+        "id": "58",
         "score": 0.65672064
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "80",
-    "product_relations": [
+    "id": "80",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "74",
+        "id": "74",
         "score": 0.44451123
       },
       {
-        "merchant": "test",
-        "product_id": "50",
+        "id": "50",
         "score": 0.44459677
       },
       {
-        "merchant": "test",
-        "product_id": "49",
+        "id": "49",
         "score": 0.45991814
       },
       {
-        "merchant": "test",
-        "product_id": "14",
+        "id": "14",
         "score": 0.47458437
       },
       {
-        "merchant": "test",
-        "product_id": "5",
+        "id": "5",
         "score": 0.519219
       },
       {
-        "merchant": "test",
-        "product_id": "28",
+        "id": "28",
         "score": 0.52547354
       },
       {
-        "merchant": "test",
-        "product_id": "70",
+        "id": "70",
         "score": 0.5424478
       },
       {
-        "merchant": "test",
-        "product_id": "86",
+        "id": "86",
         "score": 0.5662461
       },
       {
-        "merchant": "test",
-        "product_id": "77",
+        "id": "77",
         "score": 0.56931704
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "89",
-    "product_relations": [
+    "id": "89",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "48",
+        "id": "48",
         "score": 0.39206606
       },
       {
-        "merchant": "test",
-        "product_id": "97",
+        "id": "97",
         "score": 0.42461222
       },
       {
-        "merchant": "test",
-        "product_id": "99",
+        "id": "99",
         "score": 0.42556337
       },
       {
-        "merchant": "test",
-        "product_id": "45",
+        "id": "45",
         "score": 0.44494772
       },
       {
-        "merchant": "test",
-        "product_id": "65",
+        "id": "65",
         "score": 0.46441182
       },
       {
-        "merchant": "test",
-        "product_id": "30",
+        "id": "30",
         "score": 0.46618724
       },
       {
-        "merchant": "test",
-        "product_id": "43",
+        "id": "43",
         "score": 0.469285
       },
       {
-        "merchant": "test",
-        "product_id": "59",
+        "id": "59",
         "score": 0.50850934
       },
       {
-        "merchant": "test",
-        "product_id": "33",
+        "id": "33",
         "score": 0.5094971
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "98",
-    "product_relations": [
+    "id": "98",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "93",
+        "id": "93",
         "score": 0.27520326
       },
       {
-        "merchant": "test",
-        "product_id": "16",
+        "id": "16",
         "score": 0.36702585
       },
       {
-        "merchant": "test",
-        "product_id": "78",
+        "id": "78",
         "score": 0.41665348
       },
       {
-        "merchant": "test",
-        "product_id": "70",
+        "id": "70",
         "score": 0.428453
       },
       {
-        "merchant": "test",
-        "product_id": "3",
+        "id": "3",
         "score": 0.44011953
       },
       {
-        "merchant": "test",
-        "product_id": "18",
+        "id": "18",
         "score": 0.46712554
       },
       {
-        "merchant": "test",
-        "product_id": "28",
+        "id": "28",
         "score": 0.47362363
       },
       {
-        "merchant": "test",
-        "product_id": "88",
+        "id": "88",
         "score": 0.47886834
       },
       {
-        "merchant": "test",
-        "product_id": "61",
+        "id": "61",
         "score": 0.47910208
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "71",
-    "product_relations": [
+    "id": "71",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "24",
+        "id": "24",
         "score": 0.37640166
       },
       {
-        "merchant": "test",
-        "product_id": "23",
+        "id": "23",
         "score": 0.39180323
       },
       {
-        "merchant": "test",
-        "product_id": "0",
+        "id": "0",
         "score": 0.46006352
       },
       {
-        "merchant": "test",
-        "product_id": "19",
+        "id": "19",
         "score": 0.46577558
       },
       {
-        "merchant": "test",
-        "product_id": "67",
+        "id": "67",
         "score": 0.46756494
       },
       {
-        "merchant": "test",
-        "product_id": "79",
+        "id": "79",
         "score": 0.5060626
       },
       {
-        "merchant": "test",
-        "product_id": "18",
+        "id": "18",
         "score": 0.5152054
       },
       {
-        "merchant": "test",
-        "product_id": "14",
+        "id": "14",
         "score": 0.5584045
       },
       {
-        "merchant": "test",
-        "product_id": "88",
+        "id": "88",
         "score": 0.5783986
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "11",
-    "product_relations": [
+    "id": "11",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "95",
+        "id": "95",
         "score": 0.35934612
       },
       {
-        "merchant": "test",
-        "product_id": "29",
+        "id": "29",
         "score": 0.36694986
       },
       {
-        "merchant": "test",
-        "product_id": "21",
+        "id": "21",
         "score": 0.41180086
       },
       {
-        "merchant": "test",
-        "product_id": "68",
+        "id": "68",
         "score": 0.4187831
       },
       {
-        "merchant": "test",
-        "product_id": "64",
+        "id": "64",
         "score": 0.4412783
       },
       {
-        "merchant": "test",
-        "product_id": "81",
+        "id": "81",
         "score": 0.45292392
       },
       {
-        "merchant": "test",
-        "product_id": "25",
+        "id": "25",
         "score": 0.48424816
       },
       {
-        "merchant": "test",
-        "product_id": "58",
+        "id": "58",
         "score": 0.48509473
       },
       {
-        "merchant": "test",
-        "product_id": "20",
+        "id": "20",
         "score": 0.49757946
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "74",
-    "product_relations": [
+    "id": "74",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "87",
+        "id": "87",
         "score": 0.29975814
       },
       {
-        "merchant": "test",
-        "product_id": "47",
+        "id": "47",
         "score": 0.34596032
       },
       {
-        "merchant": "test",
-        "product_id": "49",
+        "id": "49",
         "score": 0.3945976
       },
       {
-        "merchant": "test",
-        "product_id": "69",
+        "id": "69",
         "score": 0.39537144
       },
       {
-        "merchant": "test",
-        "product_id": "39",
+        "id": "39",
         "score": 0.41268337
       },
       {
-        "merchant": "test",
-        "product_id": "70",
+        "id": "70",
         "score": 0.41305062
       },
       {
-        "merchant": "test",
-        "product_id": "67",
+        "id": "67",
         "score": 0.41770437
       },
       {
-        "merchant": "test",
-        "product_id": "77",
+        "id": "77",
         "score": 0.42441612
       },
       {
-        "merchant": "test",
-        "product_id": "14",
+        "id": "14",
         "score": 0.42449224
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "56",
-    "product_relations": [
+    "id": "56",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "41",
+        "id": "41",
         "score": 0.45604154
       },
       {
-        "merchant": "test",
-        "product_id": "44",
+        "id": "44",
         "score": 0.48991382
       },
       {
-        "merchant": "test",
-        "product_id": "57",
+        "id": "57",
         "score": 0.49755615
       },
       {
-        "merchant": "test",
-        "product_id": "50",
+        "id": "50",
         "score": 0.50200725
       },
       {
-        "merchant": "test",
-        "product_id": "61",
+        "id": "61",
         "score": 0.52779144
       },
       {
-        "merchant": "test",
-        "product_id": "95",
+        "id": "95",
         "score": 0.53371996
       },
       {
-        "merchant": "test",
-        "product_id": "38",
+        "id": "38",
         "score": 0.53594756
       },
       {
-        "merchant": "test",
-        "product_id": "20",
+        "id": "20",
         "score": 0.53778315
       },
       {
-        "merchant": "test",
-        "product_id": "12",
+        "id": "12",
         "score": 0.5630972
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "38",
-    "product_relations": [
+    "id": "38",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "61",
+        "id": "61",
         "score": 0.32612896
       },
       {
-        "merchant": "test",
-        "product_id": "50",
+        "id": "50",
         "score": 0.3743285
       },
       {
-        "merchant": "test",
-        "product_id": "57",
+        "id": "57",
         "score": 0.46276534
       },
       {
-        "merchant": "test",
-        "product_id": "41",
+        "id": "41",
         "score": 0.4710491
       },
       {
-        "merchant": "test",
-        "product_id": "9",
+        "id": "9",
         "score": 0.5037491
       },
       {
-        "merchant": "test",
-        "product_id": "34",
+        "id": "34",
         "score": 0.53094035
       },
       {
-        "merchant": "test",
-        "product_id": "56",
+        "id": "56",
         "score": 0.53594756
       },
       {
-        "merchant": "test",
-        "product_id": "44",
+        "id": "44",
         "score": 0.56407326
       },
       {
-        "merchant": "test",
-        "product_id": "80",
+        "id": "80",
         "score": 0.6276513
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "29",
-    "product_relations": [
+    "id": "29",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "21",
+        "id": "21",
         "score": 0.2779823
       },
       {
-        "merchant": "test",
-        "product_id": "39",
+        "id": "39",
         "score": 0.29817957
       },
       {
-        "merchant": "test",
-        "product_id": "11",
+        "id": "11",
         "score": 0.36694986
       },
       {
-        "merchant": "test",
-        "product_id": "35",
+        "id": "35",
         "score": 0.3706333
       },
       {
-        "merchant": "test",
-        "product_id": "87",
+        "id": "87",
         "score": 0.4310178
       },
       {
-        "merchant": "test",
-        "product_id": "74",
+        "id": "74",
         "score": 0.43774405
       },
       {
-        "merchant": "test",
-        "product_id": "1",
+        "id": "1",
         "score": 0.49034303
       },
       {
-        "merchant": "test",
-        "product_id": "64",
+        "id": "64",
         "score": 0.4977993
       },
       {
-        "merchant": "test",
-        "product_id": "69",
+        "id": "69",
         "score": 0.51381624
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "47",
-    "product_relations": [
+    "id": "47",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "80",
+        "id": "80",
         "score": 0.34167382
       },
       {
-        "merchant": "test",
-        "product_id": "74",
+        "id": "74",
         "score": 0.34596032
       },
       {
-        "merchant": "test",
-        "product_id": "37",
+        "id": "37",
         "score": 0.4006922
       },
       {
-        "merchant": "test",
-        "product_id": "60",
+        "id": "60",
         "score": 0.41125554
       },
       {
-        "merchant": "test",
-        "product_id": "50",
+        "id": "50",
         "score": 0.45434245
       },
       {
-        "merchant": "test",
-        "product_id": "61",
+        "id": "61",
         "score": 0.46346277
       },
       {
-        "merchant": "test",
-        "product_id": "73",
+        "id": "73",
         "score": 0.47902417
       },
       {
-        "merchant": "test",
-        "product_id": "38",
+        "id": "38",
         "score": 0.4883735
       },
       {
-        "merchant": "test",
-        "product_id": "87",
+        "id": "87",
         "score": 0.49686193
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "20",
-    "product_relations": [
+    "id": "20",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "21",
+        "id": "21",
         "score": 0.39465398
       },
       {
-        "merchant": "test",
-        "product_id": "92",
+        "id": "92",
         "score": 0.43293053
       },
       {
-        "merchant": "test",
-        "product_id": "68",
+        "id": "68",
         "score": 0.4477577
       },
       {
-        "merchant": "test",
-        "product_id": "11",
+        "id": "11",
         "score": 0.49757946
       },
       {
-        "merchant": "test",
-        "product_id": "41",
+        "id": "41",
         "score": 0.5119474
       },
       {
-        "merchant": "test",
-        "product_id": "12",
+        "id": "12",
         "score": 0.5132025
       },
       {
-        "merchant": "test",
-        "product_id": "6",
+        "id": "6",
         "score": 0.5357639
       },
       {
-        "merchant": "test",
-        "product_id": "56",
+        "id": "56",
         "score": 0.53778315
       },
       {
-        "merchant": "test",
-        "product_id": "91",
+        "id": "91",
         "score": 0.5421128
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "2",
-    "product_relations": [
+    "id": "2",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "46",
+        "id": "46",
         "score": 0.27433965
       },
       {
-        "merchant": "test",
-        "product_id": "83",
+        "id": "83",
         "score": 0.2848716
       },
       {
-        "merchant": "test",
-        "product_id": "62",
+        "id": "62",
         "score": 0.4090318
       },
       {
-        "merchant": "test",
-        "product_id": "65",
+        "id": "65",
         "score": 0.43473333
       },
       {
-        "merchant": "test",
-        "product_id": "30",
+        "id": "30",
         "score": 0.5056273
       },
       {
-        "merchant": "test",
-        "product_id": "48",
+        "id": "48",
         "score": 0.50602895
       },
       {
-        "merchant": "test",
-        "product_id": "85",
+        "id": "85",
         "score": 0.5135197
       },
       {
-        "merchant": "test",
-        "product_id": "33",
+        "id": "33",
         "score": 0.5144084
       },
       {
-        "merchant": "test",
-        "product_id": "90",
+        "id": "90",
         "score": 0.5190815
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "65",
-    "product_relations": [
+    "id": "65",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "42",
+        "id": "42",
         "score": 0.3502826
       },
       {
-        "merchant": "test",
-        "product_id": "90",
+        "id": "90",
         "score": 0.39514205
       },
       {
-        "merchant": "test",
-        "product_id": "46",
+        "id": "46",
         "score": 0.3958388
       },
       {
-        "merchant": "test",
-        "product_id": "30",
+        "id": "30",
         "score": 0.39974692
       },
       {
-        "merchant": "test",
-        "product_id": "57",
+        "id": "57",
         "score": 0.43022192
       },
       {
-        "merchant": "test",
-        "product_id": "48",
+        "id": "48",
         "score": 0.44323188
       },
       {
-        "merchant": "test",
-        "product_id": "89",
+        "id": "89",
         "score": 0.46441182
       },
       {
-        "merchant": "test",
-        "product_id": "43",
+        "id": "43",
         "score": 0.50100297
       },
       {
-        "merchant": "test",
-        "product_id": "83",
+        "id": "83",
         "score": 0.5043246
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "5",
-    "product_relations": [
+    "id": "5",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "49",
+        "id": "49",
         "score": 0.3131039
       },
       {
-        "merchant": "test",
-        "product_id": "64",
+        "id": "64",
         "score": 0.32600278
       },
       {
-        "merchant": "test",
-        "product_id": "14",
+        "id": "14",
         "score": 0.347792
       },
       {
-        "merchant": "test",
-        "product_id": "9",
+        "id": "9",
         "score": 0.35813367
       },
       {
-        "merchant": "test",
-        "product_id": "77",
+        "id": "77",
         "score": 0.3871832
       },
       {
-        "merchant": "test",
-        "product_id": "74",
+        "id": "74",
         "score": 0.43542644
       },
       {
-        "merchant": "test",
-        "product_id": "61",
+        "id": "61",
         "score": 0.48165244
       },
       {
-        "merchant": "test",
-        "product_id": "98",
+        "id": "98",
         "score": 0.5096591
       },
       {
-        "merchant": "test",
-        "product_id": "67",
+        "id": "67",
         "score": 0.51347196
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "14",
-    "product_relations": [
+    "id": "14",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "49",
+        "id": "49",
         "score": 0.31258413
       },
       {
-        "merchant": "test",
-        "product_id": "67",
+        "id": "67",
         "score": 0.35349038
       },
       {
-        "merchant": "test",
-        "product_id": "23",
+        "id": "23",
         "score": 0.38793063
       },
       {
-        "merchant": "test",
-        "product_id": "70",
+        "id": "70",
         "score": 0.4207747
       },
       {
-        "merchant": "test",
-        "product_id": "74",
+        "id": "74",
         "score": 0.42449224
       },
       {
-        "merchant": "test",
-        "product_id": "18",
+        "id": "18",
         "score": 0.42759162
       },
       {
-        "merchant": "test",
-        "product_id": "77",
+        "id": "77",
         "score": 0.43598658
       },
       {
-        "merchant": "test",
-        "product_id": "16",
+        "id": "16",
         "score": 0.44214183
       },
       {
-        "merchant": "test",
-        "product_id": "80",
+        "id": "80",
         "score": 0.47458437
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "46",
-    "product_relations": [
+    "id": "46",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "2",
+        "id": "2",
         "score": 0.27433965
       },
       {
-        "merchant": "test",
-        "product_id": "65",
+        "id": "65",
         "score": 0.3958388
       },
       {
-        "merchant": "test",
-        "product_id": "83",
+        "id": "83",
         "score": 0.41748598
       },
       {
-        "merchant": "test",
-        "product_id": "90",
+        "id": "90",
         "score": 0.44396245
       },
       {
-        "merchant": "test",
-        "product_id": "85",
+        "id": "85",
         "score": 0.47161484
       },
       {
-        "merchant": "test",
-        "product_id": "33",
+        "id": "33",
         "score": 0.5103397
       },
       {
-        "merchant": "test",
-        "product_id": "62",
+        "id": "62",
         "score": 0.5145751
       },
       {
-        "merchant": "test",
-        "product_id": "30",
+        "id": "30",
         "score": 0.5621088
       },
       {
-        "merchant": "test",
-        "product_id": "48",
+        "id": "48",
         "score": 0.57162786
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "82",
-    "product_relations": [
+    "id": "82",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "52",
+        "id": "52",
         "score": 0.36254683
       },
       {
-        "merchant": "test",
-        "product_id": "88",
+        "id": "88",
         "score": 0.4345928
       },
       {
-        "merchant": "test",
-        "product_id": "3",
+        "id": "3",
         "score": 0.44271177
       },
       {
-        "merchant": "test",
-        "product_id": "16",
+        "id": "16",
         "score": 0.45924544
       },
       {
-        "merchant": "test",
-        "product_id": "17",
+        "id": "17",
         "score": 0.4878111
       },
       {
-        "merchant": "test",
-        "product_id": "18",
+        "id": "18",
         "score": 0.5428278
       },
       {
-        "merchant": "test",
-        "product_id": "40",
+        "id": "40",
         "score": 0.6126982
       },
       {
-        "merchant": "test",
-        "product_id": "23",
+        "id": "23",
         "score": 0.6553497
       },
       {
-        "merchant": "test",
-        "product_id": "19",
+        "id": "19",
         "score": 0.6841789
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "91",
-    "product_relations": [
+    "id": "91",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "68",
+        "id": "68",
         "score": 0.4038759
       },
       {
-        "merchant": "test",
-        "product_id": "26",
+        "id": "26",
         "score": 0.41106352
       },
       {
-        "merchant": "test",
-        "product_id": "7",
+        "id": "7",
         "score": 0.4345409
       },
       {
-        "merchant": "test",
-        "product_id": "95",
+        "id": "95",
         "score": 0.43622485
       },
       {
-        "merchant": "test",
-        "product_id": "6",
+        "id": "6",
         "score": 0.45103025
       },
       {
-        "merchant": "test",
-        "product_id": "59",
+        "id": "59",
         "score": 0.45535398
       },
       {
-        "merchant": "test",
-        "product_id": "27",
+        "id": "27",
         "score": 0.48713827
       },
       {
-        "merchant": "test",
-        "product_id": "13",
+        "id": "13",
         "score": 0.5030387
       },
       {
-        "merchant": "test",
-        "product_id": "20",
+        "id": "20",
         "score": 0.5421128
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "55",
-    "product_relations": [
+    "id": "55",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "48",
+        "id": "48",
         "score": 0.41094348
       },
       {
-        "merchant": "test",
-        "product_id": "8",
+        "id": "8",
         "score": 0.41553143
       },
       {
-        "merchant": "test",
-        "product_id": "83",
+        "id": "83",
         "score": 0.44470695
       },
       {
-        "merchant": "test",
-        "product_id": "45",
+        "id": "45",
         "score": 0.4864928
       },
       {
-        "merchant": "test",
-        "product_id": "90",
+        "id": "90",
         "score": 0.5040231
       },
       {
-        "merchant": "test",
-        "product_id": "54",
+        "id": "54",
         "score": 0.5044117
       },
       {
-        "merchant": "test",
-        "product_id": "1",
+        "id": "1",
         "score": 0.51011235
       },
       {
-        "merchant": "test",
-        "product_id": "89",
+        "id": "89",
         "score": 0.51706684
       },
       {
-        "merchant": "test",
-        "product_id": "60",
+        "id": "60",
         "score": 0.530043
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "64",
-    "product_relations": [
+    "id": "64",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "60",
+        "id": "60",
         "score": 0.3245354
       },
       {
-        "merchant": "test",
-        "product_id": "5",
+        "id": "5",
         "score": 0.32600278
       },
       {
-        "merchant": "test",
-        "product_id": "36",
+        "id": "36",
         "score": 0.3826609
       },
       {
-        "merchant": "test",
-        "product_id": "76",
+        "id": "76",
         "score": 0.43087363
       },
       {
-        "merchant": "test",
-        "product_id": "8",
+        "id": "8",
         "score": 0.47858638
       },
       {
-        "merchant": "test",
-        "product_id": "74",
+        "id": "74",
         "score": 0.4802037
       },
       {
-        "merchant": "test",
-        "product_id": "3",
+        "id": "3",
         "score": 0.48496485
       },
       {
-        "merchant": "test",
-        "product_id": "29",
+        "id": "29",
         "score": 0.4977993
       },
       {
-        "merchant": "test",
-        "product_id": "87",
+        "id": "87",
         "score": 0.50706685
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "73",
-    "product_relations": [
+    "id": "73",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "37",
+        "id": "37",
         "score": 0.3085569
       },
       {
-        "merchant": "test",
-        "product_id": "26",
+        "id": "26",
         "score": 0.43014544
       },
       {
-        "merchant": "test",
-        "product_id": "58",
+        "id": "58",
         "score": 0.43937707
       },
       {
-        "merchant": "test",
-        "product_id": "60",
+        "id": "60",
         "score": 0.469773
       },
       {
-        "merchant": "test",
-        "product_id": "47",
+        "id": "47",
         "score": 0.47902417
       },
       {
-        "merchant": "test",
-        "product_id": "51",
+        "id": "51",
         "score": 0.50000936
       },
       {
-        "merchant": "test",
-        "product_id": "0",
+        "id": "0",
         "score": 0.5454876
       },
       {
-        "merchant": "test",
-        "product_id": "22",
+        "id": "22",
         "score": 0.5612398
       },
       {
-        "merchant": "test",
-        "product_id": "79",
+        "id": "79",
         "score": 0.58065546
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "58",
-    "product_relations": [
+    "id": "58",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "22",
+        "id": "22",
         "score": 0.29398102
       },
       {
-        "merchant": "test",
-        "product_id": "25",
+        "id": "25",
         "score": 0.40784383
       },
       {
-        "merchant": "test",
-        "product_id": "73",
+        "id": "73",
         "score": 0.43937707
       },
       {
-        "merchant": "test",
-        "product_id": "62",
+        "id": "62",
         "score": 0.47382998
       },
       {
-        "merchant": "test",
-        "product_id": "11",
+        "id": "11",
         "score": 0.48509473
       },
       {
-        "merchant": "test",
-        "product_id": "51",
+        "id": "51",
         "score": 0.5207211
       },
       {
-        "merchant": "test",
-        "product_id": "81",
+        "id": "81",
         "score": 0.52963513
       },
       {
-        "merchant": "test",
-        "product_id": "2",
+        "id": "2",
         "score": 0.545253
       },
       {
-        "merchant": "test",
-        "product_id": "72",
+        "id": "72",
         "score": 0.573057
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "67",
-    "product_relations": [
+    "id": "67",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "14",
+        "id": "14",
         "score": 0.35349038
       },
       {
-        "merchant": "test",
-        "product_id": "77",
+        "id": "77",
         "score": 0.38920975
       },
       {
-        "merchant": "test",
-        "product_id": "74",
+        "id": "74",
         "score": 0.41770437
       },
       {
-        "merchant": "test",
-        "product_id": "28",
+        "id": "28",
         "score": 0.44374302
       },
       {
-        "merchant": "test",
-        "product_id": "78",
+        "id": "78",
         "score": 0.46169275
       },
       {
-        "merchant": "test",
-        "product_id": "71",
+        "id": "71",
         "score": 0.46756494
       },
       {
-        "merchant": "test",
-        "product_id": "70",
+        "id": "70",
         "score": 0.5010217
       },
       {
-        "merchant": "test",
-        "product_id": "98",
+        "id": "98",
         "score": 0.50311077
       },
       {
-        "merchant": "test",
-        "product_id": "18",
+        "id": "18",
         "score": 0.5110102
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "85",
-    "product_relations": [
+    "id": "85",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "65",
+        "id": "65",
         "score": 0.2944543
       },
       {
-        "merchant": "test",
-        "product_id": "42",
+        "id": "42",
         "score": 0.36952856
       },
       {
-        "merchant": "test",
-        "product_id": "60",
+        "id": "60",
         "score": 0.39757586
       },
       {
-        "merchant": "test",
-        "product_id": "62",
+        "id": "62",
         "score": 0.4401975
       },
       {
-        "merchant": "test",
-        "product_id": "90",
+        "id": "90",
         "score": 0.45032322
       },
       {
-        "merchant": "test",
-        "product_id": "46",
+        "id": "46",
         "score": 0.47161484
       },
       {
-        "merchant": "test",
-        "product_id": "76",
+        "id": "76",
         "score": 0.48207963
       },
       {
-        "merchant": "test",
-        "product_id": "57",
+        "id": "57",
         "score": 0.49747545
       },
       {
-        "merchant": "test",
-        "product_id": "63",
+        "id": "63",
         "score": 0.51159644
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "94",
-    "product_relations": [
+    "id": "94",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "53",
+        "id": "53",
         "score": 0.31045476
       },
       {
-        "merchant": "test",
-        "product_id": "40",
+        "id": "40",
         "score": 0.36797845
       },
       {
-        "merchant": "test",
-        "product_id": "10",
+        "id": "10",
         "score": 0.3994658
       },
       {
-        "merchant": "test",
-        "product_id": "54",
+        "id": "54",
         "score": 0.44448784
       },
       {
-        "merchant": "test",
-        "product_id": "62",
+        "id": "62",
         "score": 0.49113992
       },
       {
-        "merchant": "test",
-        "product_id": "72",
+        "id": "72",
         "score": 0.49605942
       },
       {
-        "merchant": "test",
-        "product_id": "61",
+        "id": "61",
         "score": 0.50554806
       },
       {
-        "merchant": "test",
-        "product_id": "9",
+        "id": "9",
         "score": 0.5190092
       },
       {
-        "merchant": "test",
-        "product_id": "57",
+        "id": "57",
         "score": 0.53982806
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "40",
-    "product_relations": [
+    "id": "40",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "94",
+        "id": "94",
         "score": 0.36797845
       },
       {
-        "merchant": "test",
-        "product_id": "53",
+        "id": "53",
         "score": 0.44230118
       },
       {
-        "merchant": "test",
-        "product_id": "3",
+        "id": "3",
         "score": 0.46290913
       },
       {
-        "merchant": "test",
-        "product_id": "88",
+        "id": "88",
         "score": 0.5136092
       },
       {
-        "merchant": "test",
-        "product_id": "18",
+        "id": "18",
         "score": 0.5457662
       },
       {
-        "merchant": "test",
-        "product_id": "72",
+        "id": "72",
         "score": 0.5571654
       },
       {
-        "merchant": "test",
-        "product_id": "10",
+        "id": "10",
         "score": 0.57101977
       },
       {
-        "merchant": "test",
-        "product_id": "82",
+        "id": "82",
         "score": 0.6126982
       },
       {
-        "merchant": "test",
-        "product_id": "16",
+        "id": "16",
         "score": 0.6240525
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "49",
-    "product_relations": [
+    "id": "49",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "14",
+        "id": "14",
         "score": 0.31258413
       },
       {
-        "merchant": "test",
-        "product_id": "5",
+        "id": "5",
         "score": 0.3131039
       },
       {
-        "merchant": "test",
-        "product_id": "70",
+        "id": "70",
         "score": 0.37582883
       },
       {
-        "merchant": "test",
-        "product_id": "74",
+        "id": "74",
         "score": 0.3945976
       },
       {
-        "merchant": "test",
-        "product_id": "77",
+        "id": "77",
         "score": 0.43937758
       },
       {
-        "merchant": "test",
-        "product_id": "93",
+        "id": "93",
         "score": 0.45979056
       },
       {
-        "merchant": "test",
-        "product_id": "80",
+        "id": "80",
         "score": 0.45991814
       },
       {
-        "merchant": "test",
-        "product_id": "61",
+        "id": "61",
         "score": 0.5373413
       },
       {
-        "merchant": "test",
-        "product_id": "67",
+        "id": "67",
         "score": 0.5440506
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "4",
-    "product_relations": [
+    "id": "4",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "31",
+        "id": "31",
         "score": 0.4248098
       },
       {
-        "merchant": "test",
-        "product_id": "62",
+        "id": "62",
         "score": 0.45211065
       },
       {
-        "merchant": "test",
-        "product_id": "96",
+        "id": "96",
         "score": 0.47202316
       },
       {
-        "merchant": "test",
-        "product_id": "75",
+        "id": "75",
         "score": 0.51272434
       },
       {
-        "merchant": "test",
-        "product_id": "97",
+        "id": "97",
         "score": 0.5176063
       },
       {
-        "merchant": "test",
-        "product_id": "10",
+        "id": "10",
         "score": 0.51903075
       },
       {
-        "merchant": "test",
-        "product_id": "69",
+        "id": "69",
         "score": 0.526486
       },
       {
-        "merchant": "test",
-        "product_id": "53",
+        "id": "53",
         "score": 0.5535295
       },
       {
-        "merchant": "test",
-        "product_id": "13",
+        "id": "13",
         "score": 0.55494046
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "13",
-    "product_relations": [
+    "id": "13",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "92",
+        "id": "92",
         "score": 0.49089873
       },
       {
-        "merchant": "test",
-        "product_id": "91",
+        "id": "91",
         "score": 0.5030387
       },
       {
-        "merchant": "test",
-        "product_id": "4",
+        "id": "4",
         "score": 0.55494046
       },
       {
-        "merchant": "test",
-        "product_id": "75",
+        "id": "75",
         "score": 0.57043934
       },
       {
-        "merchant": "test",
-        "product_id": "68",
+        "id": "68",
         "score": 0.58236665
       },
       {
-        "merchant": "test",
-        "product_id": "7",
+        "id": "7",
         "score": 0.58739597
       },
       {
-        "merchant": "test",
-        "product_id": "59",
+        "id": "59",
         "score": 0.5935813
       },
       {
-        "merchant": "test",
-        "product_id": "66",
+        "id": "66",
         "score": 0.634215
       },
       {
-        "merchant": "test",
-        "product_id": "6",
+        "id": "6",
         "score": 0.64753395
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "22",
-    "product_relations": [
+    "id": "22",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "58",
+        "id": "58",
         "score": 0.29398102
       },
       {
-        "merchant": "test",
-        "product_id": "25",
+        "id": "25",
         "score": 0.36825332
       },
       {
-        "merchant": "test",
-        "product_id": "81",
+        "id": "81",
         "score": 0.4918963
       },
       {
-        "merchant": "test",
-        "product_id": "73",
+        "id": "73",
         "score": 0.5612398
       },
       {
-        "merchant": "test",
-        "product_id": "72",
+        "id": "72",
         "score": 0.58109754
       },
       {
-        "merchant": "test",
-        "product_id": "11",
+        "id": "11",
         "score": 0.59382325
       },
       {
-        "merchant": "test",
-        "product_id": "51",
+        "id": "51",
         "score": 0.5955605
       },
       {
-        "merchant": "test",
-        "product_id": "32",
+        "id": "32",
         "score": 0.59621054
       },
       {
-        "merchant": "test",
-        "product_id": "37",
+        "id": "37",
         "score": 0.6883035
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "31",
-    "product_relations": [
+    "id": "31",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "75",
+        "id": "75",
         "score": 0.3629407
       },
       {
-        "merchant": "test",
-        "product_id": "97",
+        "id": "97",
         "score": 0.38307402
       },
       {
-        "merchant": "test",
-        "product_id": "43",
+        "id": "43",
         "score": 0.38610372
       },
       {
-        "merchant": "test",
-        "product_id": "4",
+        "id": "4",
         "score": 0.4248098
       },
       {
-        "merchant": "test",
-        "product_id": "48",
+        "id": "48",
         "score": 0.44673654
       },
       {
-        "merchant": "test",
-        "product_id": "45",
+        "id": "45",
         "score": 0.47556505
       },
       {
-        "merchant": "test",
-        "product_id": "84",
+        "id": "84",
         "score": 0.47909054
       },
       {
-        "merchant": "test",
-        "product_id": "13",
+        "id": "13",
         "score": 0.4809036
       },
       {
-        "merchant": "test",
-        "product_id": "99",
+        "id": "99",
         "score": 0.51633173
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "76",
-    "product_relations": [
+    "id": "76",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "60",
+        "id": "60",
         "score": 0.41522828
       },
       {
-        "merchant": "test",
-        "product_id": "63",
+        "id": "63",
         "score": 0.41617572
       },
       {
-        "merchant": "test",
-        "product_id": "33",
+        "id": "33",
         "score": 0.46887457
       },
       {
-        "merchant": "test",
-        "product_id": "8",
+        "id": "8",
         "score": 0.4707337
       },
       {
-        "merchant": "test",
-        "product_id": "85",
+        "id": "85",
         "score": 0.48207963
       },
       {
-        "merchant": "test",
-        "product_id": "42",
+        "id": "42",
         "score": 0.53505427
       },
       {
-        "merchant": "test",
-        "product_id": "55",
+        "id": "55",
         "score": 0.5351542
       },
       {
-        "merchant": "test",
-        "product_id": "0",
+        "id": "0",
         "score": 0.5915132
       },
       {
-        "merchant": "test",
-        "product_id": "1",
+        "id": "1",
         "score": 0.6307089
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "16",
-    "product_relations": [
+    "id": "16",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "18",
+        "id": "18",
         "score": 0.31212157
       },
       {
-        "merchant": "test",
-        "product_id": "88",
+        "id": "88",
         "score": 0.32961062
       },
       {
-        "merchant": "test",
-        "product_id": "98",
+        "id": "98",
         "score": 0.36702585
       },
       {
-        "merchant": "test",
-        "product_id": "14",
+        "id": "14",
         "score": 0.44214183
       },
       {
-        "merchant": "test",
-        "product_id": "23",
+        "id": "23",
         "score": 0.4565069
       },
       {
-        "merchant": "test",
-        "product_id": "82",
+        "id": "82",
         "score": 0.45924544
       },
       {
-        "merchant": "test",
-        "product_id": "19",
+        "id": "19",
         "score": 0.465056
       },
       {
-        "merchant": "test",
-        "product_id": "52",
+        "id": "52",
         "score": 0.48278177
       },
       {
-        "merchant": "test",
-        "product_id": "86",
+        "id": "86",
         "score": 0.49051666
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "97",
-    "product_relations": [
+    "id": "97",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "48",
+        "id": "48",
         "score": 0.32595795
       },
       {
-        "merchant": "test",
-        "product_id": "99",
+        "id": "99",
         "score": 0.34157223
       },
       {
-        "merchant": "test",
-        "product_id": "43",
+        "id": "43",
         "score": 0.3486682
       },
       {
-        "merchant": "test",
-        "product_id": "35",
+        "id": "35",
         "score": 0.37638524
       },
       {
-        "merchant": "test",
-        "product_id": "31",
+        "id": "31",
         "score": 0.38307402
       },
       {
-        "merchant": "test",
-        "product_id": "29",
+        "id": "29",
         "score": 0.41133305
       },
       {
-        "merchant": "test",
-        "product_id": "89",
+        "id": "89",
         "score": 0.42461222
       },
       {
-        "merchant": "test",
-        "product_id": "45",
+        "id": "45",
         "score": 0.43355837
       },
       {
-        "merchant": "test",
-        "product_id": "84",
+        "id": "84",
         "score": 0.45043597
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "7",
-    "product_relations": [
+    "id": "7",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "91",
+        "id": "91",
         "score": 0.4345409
       },
       {
-        "merchant": "test",
-        "product_id": "6",
+        "id": "6",
         "score": 0.46908405
       },
       {
-        "merchant": "test",
-        "product_id": "59",
+        "id": "59",
         "score": 0.5133154
       },
       {
-        "merchant": "test",
-        "product_id": "95",
+        "id": "95",
         "score": 0.523039
       },
       {
-        "merchant": "test",
-        "product_id": "68",
+        "id": "68",
         "score": 0.5408018
       },
       {
-        "merchant": "test",
-        "product_id": "27",
+        "id": "27",
         "score": 0.5685801
       },
       {
-        "merchant": "test",
-        "product_id": "13",
+        "id": "13",
         "score": 0.58739597
       },
       {
-        "merchant": "test",
-        "product_id": "12",
+        "id": "12",
         "score": 0.6578715
       },
       {
-        "merchant": "test",
-        "product_id": "75",
+        "id": "75",
         "score": 0.6617019
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "79",
-    "product_relations": [
+    "id": "79",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "0",
+        "id": "0",
         "score": 0.3312431
       },
       {
-        "merchant": "test",
-        "product_id": "42",
+        "id": "42",
         "score": 0.468062
       },
       {
-        "merchant": "test",
-        "product_id": "71",
+        "id": "71",
         "score": 0.5060626
       },
       {
-        "merchant": "test",
-        "product_id": "35",
+        "id": "35",
         "score": 0.5182536
       },
       {
-        "merchant": "test",
-        "product_id": "36",
+        "id": "36",
         "score": 0.5256806
       },
       {
-        "merchant": "test",
-        "product_id": "15",
+        "id": "15",
         "score": 0.55457556
       },
       {
-        "merchant": "test",
-        "product_id": "30",
+        "id": "30",
         "score": 0.5648909
       },
       {
-        "merchant": "test",
-        "product_id": "73",
+        "id": "73",
         "score": 0.58065546
       },
       {
-        "merchant": "test",
-        "product_id": "60",
+        "id": "60",
         "score": 0.5889944
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "88",
-    "product_relations": [
+    "id": "88",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "16",
+        "id": "16",
         "score": 0.32961062
       },
       {
-        "merchant": "test",
-        "product_id": "18",
+        "id": "18",
         "score": 0.36953112
       },
       {
-        "merchant": "test",
-        "product_id": "23",
+        "id": "23",
         "score": 0.3999213
       },
       {
-        "merchant": "test",
-        "product_id": "82",
+        "id": "82",
         "score": 0.4345928
       },
       {
-        "merchant": "test",
-        "product_id": "98",
+        "id": "98",
         "score": 0.47886834
       },
       {
-        "merchant": "test",
-        "product_id": "19",
+        "id": "19",
         "score": 0.50947875
       },
       {
-        "merchant": "test",
-        "product_id": "40",
+        "id": "40",
         "score": 0.5136092
       },
       {
-        "merchant": "test",
-        "product_id": "52",
+        "id": "52",
         "score": 0.52047443
       },
       {
-        "merchant": "test",
-        "product_id": "24",
+        "id": "24",
         "score": 0.54549366
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "70",
-    "product_relations": [
+    "id": "70",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "49",
+        "id": "49",
         "score": 0.37582883
       },
       {
-        "merchant": "test",
-        "product_id": "74",
+        "id": "74",
         "score": 0.41305062
       },
       {
-        "merchant": "test",
-        "product_id": "14",
+        "id": "14",
         "score": 0.4207747
       },
       {
-        "merchant": "test",
-        "product_id": "78",
+        "id": "78",
         "score": 0.4507921
       },
       {
-        "merchant": "test",
-        "product_id": "93",
+        "id": "93",
         "score": 0.45846045
       },
       {
-        "merchant": "test",
-        "product_id": "67",
+        "id": "67",
         "score": 0.5010217
       },
       {
-        "merchant": "test",
-        "product_id": "61",
+        "id": "61",
         "score": 0.5386032
       },
       {
-        "merchant": "test",
-        "product_id": "80",
+        "id": "80",
         "score": 0.5424478
       },
       {
-        "merchant": "test",
-        "product_id": "28",
+        "id": "28",
         "score": 0.5685879
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "43",
-    "product_relations": [
+    "id": "43",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "97",
+        "id": "97",
         "score": 0.3486682
       },
       {
-        "merchant": "test",
-        "product_id": "90",
+        "id": "90",
         "score": 0.37711215
       },
       {
-        "merchant": "test",
-        "product_id": "31",
+        "id": "31",
         "score": 0.38610372
       },
       {
-        "merchant": "test",
-        "product_id": "99",
+        "id": "99",
         "score": 0.41837066
       },
       {
-        "merchant": "test",
-        "product_id": "89",
+        "id": "89",
         "score": 0.469285
       },
       {
-        "merchant": "test",
-        "product_id": "45",
+        "id": "45",
         "score": 0.4726616
       },
       {
-        "merchant": "test",
-        "product_id": "48",
+        "id": "48",
         "score": 0.47824705
       },
       {
-        "merchant": "test",
-        "product_id": "65",
+        "id": "65",
         "score": 0.50100297
       },
       {
-        "merchant": "test",
-        "product_id": "55",
+        "id": "55",
         "score": 0.55008006
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "52",
-    "product_relations": [
+    "id": "52",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "82",
+        "id": "82",
         "score": 0.36254683
       },
       {
-        "merchant": "test",
-        "product_id": "17",
+        "id": "17",
         "score": 0.44597542
       },
       {
-        "merchant": "test",
-        "product_id": "16",
+        "id": "16",
         "score": 0.48278177
       },
       {
-        "merchant": "test",
-        "product_id": "18",
+        "id": "18",
         "score": 0.5155995
       },
       {
-        "merchant": "test",
-        "product_id": "88",
+        "id": "88",
         "score": 0.52047443
       },
       {
-        "merchant": "test",
-        "product_id": "81",
+        "id": "81",
         "score": 0.5650689
       },
       {
-        "merchant": "test",
-        "product_id": "23",
+        "id": "23",
         "score": 0.62715894
       },
       {
-        "merchant": "test",
-        "product_id": "3",
+        "id": "3",
         "score": 0.6326081
       },
       {
-        "merchant": "test",
-        "product_id": "72",
+        "id": "72",
         "score": 0.6760222
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "25",
-    "product_relations": [
+    "id": "25",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "22",
+        "id": "22",
         "score": 0.36825332
       },
       {
-        "merchant": "test",
-        "product_id": "58",
+        "id": "58",
         "score": 0.40784383
       },
       {
-        "merchant": "test",
-        "product_id": "11",
+        "id": "11",
         "score": 0.48424816
       },
       {
-        "merchant": "test",
-        "product_id": "81",
+        "id": "81",
         "score": 0.49870953
       },
       {
-        "merchant": "test",
-        "product_id": "54",
+        "id": "54",
         "score": 0.53252
       },
       {
-        "merchant": "test",
-        "product_id": "32",
+        "id": "32",
         "score": 0.536115
       },
       {
-        "merchant": "test",
-        "product_id": "72",
+        "id": "72",
         "score": 0.55837876
       },
       {
-        "merchant": "test",
-        "product_id": "60",
+        "id": "60",
         "score": 0.5984253
       },
       {
-        "merchant": "test",
-        "product_id": "73",
+        "id": "73",
         "score": 0.61715
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "34",
-    "product_relations": [
+    "id": "34",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "41",
+        "id": "41",
         "score": 0.34712917
       },
       {
-        "merchant": "test",
-        "product_id": "57",
+        "id": "57",
         "score": 0.40635762
       },
       {
-        "merchant": "test",
-        "product_id": "61",
+        "id": "61",
         "score": 0.48086792
       },
       {
-        "merchant": "test",
-        "product_id": "44",
+        "id": "44",
         "score": 0.4877252
       },
       {
-        "merchant": "test",
-        "product_id": "38",
+        "id": "38",
         "score": 0.53094035
       },
       {
-        "merchant": "test",
-        "product_id": "9",
+        "id": "9",
         "score": 0.5394456
       },
       {
-        "merchant": "test",
-        "product_id": "68",
+        "id": "68",
         "score": 0.5544708
       },
       {
-        "merchant": "test",
-        "product_id": "20",
+        "id": "20",
         "score": 0.5755156
       },
       {
-        "merchant": "test",
-        "product_id": "50",
+        "id": "50",
         "score": 0.58149254
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "61",
-    "product_relations": [
+    "id": "61",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "57",
+        "id": "57",
         "score": 0.31888646
       },
       {
-        "merchant": "test",
-        "product_id": "38",
+        "id": "38",
         "score": 0.32612896
       },
       {
-        "merchant": "test",
-        "product_id": "9",
+        "id": "9",
         "score": 0.3647654
       },
       {
-        "merchant": "test",
-        "product_id": "41",
+        "id": "41",
         "score": 0.37145784
       },
       {
-        "merchant": "test",
-        "product_id": "34",
+        "id": "34",
         "score": 0.48086792
       },
       {
-        "merchant": "test",
-        "product_id": "5",
+        "id": "5",
         "score": 0.48165244
       },
       {
-        "merchant": "test",
-        "product_id": "50",
+        "id": "50",
         "score": 0.49739516
       },
       {
-        "merchant": "test",
-        "product_id": "93",
+        "id": "93",
         "score": 0.52496403
       },
       {
-        "merchant": "test",
-        "product_id": "56",
+        "id": "56",
         "score": 0.52779144
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "10",
-    "product_relations": [
+    "id": "10",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "53",
+        "id": "53",
         "score": 0.37739745
       },
       {
-        "merchant": "test",
-        "product_id": "94",
+        "id": "94",
         "score": 0.3994658
       },
       {
-        "merchant": "test",
-        "product_id": "12",
+        "id": "12",
         "score": 0.48235562
       },
       {
-        "merchant": "test",
-        "product_id": "95",
+        "id": "95",
         "score": 0.5052129
       },
       {
-        "merchant": "test",
-        "product_id": "66",
+        "id": "66",
         "score": 0.5269171
       },
       {
-        "merchant": "test",
-        "product_id": "6",
+        "id": "6",
         "score": 0.5375577
       },
       {
-        "merchant": "test",
-        "product_id": "7",
+        "id": "7",
         "score": 0.5456401
       },
       {
-        "merchant": "test",
-        "product_id": "54",
+        "id": "54",
         "score": 0.5501715
       },
       {
-        "merchant": "test",
-        "product_id": "62",
+        "id": "62",
         "score": 0.5552762
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "37",
-    "product_relations": [
+    "id": "37",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "73",
+        "id": "73",
         "score": 0.3085569
       },
       {
-        "merchant": "test",
-        "product_id": "47",
+        "id": "47",
         "score": 0.4006922
       },
       {
-        "merchant": "test",
-        "product_id": "60",
+        "id": "60",
         "score": 0.41203073
       },
       {
-        "merchant": "test",
-        "product_id": "87",
+        "id": "87",
         "score": 0.48528674
       },
       {
-        "merchant": "test",
-        "product_id": "74",
+        "id": "74",
         "score": 0.5023117
       },
       {
-        "merchant": "test",
-        "product_id": "26",
+        "id": "26",
         "score": 0.5472201
       },
       {
-        "merchant": "test",
-        "product_id": "58",
+        "id": "58",
         "score": 0.57318956
       },
       {
-        "merchant": "test",
-        "product_id": "85",
+        "id": "85",
         "score": 0.5858192
       },
       {
-        "merchant": "test",
-        "product_id": "42",
+        "id": "42",
         "score": 0.5963771
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "1",
-    "product_relations": [
+    "id": "1",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "69",
+        "id": "69",
         "score": 0.33637142
       },
       {
-        "merchant": "test",
-        "product_id": "39",
+        "id": "39",
         "score": 0.37429753
       },
       {
-        "merchant": "test",
-        "product_id": "87",
+        "id": "87",
         "score": 0.4271409
       },
       {
-        "merchant": "test",
-        "product_id": "54",
+        "id": "54",
         "score": 0.47875884
       },
       {
-        "merchant": "test",
-        "product_id": "29",
+        "id": "29",
         "score": 0.49034303
       },
       {
-        "merchant": "test",
-        "product_id": "62",
+        "id": "62",
         "score": 0.49322015
       },
       {
-        "merchant": "test",
-        "product_id": "55",
+        "id": "55",
         "score": 0.51011235
       },
       {
-        "merchant": "test",
-        "product_id": "21",
+        "id": "21",
         "score": 0.5331946
       },
       {
-        "merchant": "test",
-        "product_id": "35",
+        "id": "35",
         "score": 0.5675285
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "28",
-    "product_relations": [
+    "id": "28",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "86",
+        "id": "86",
         "score": 0.3878272
       },
       {
-        "merchant": "test",
-        "product_id": "77",
+        "id": "77",
         "score": 0.4228403
       },
       {
-        "merchant": "test",
-        "product_id": "67",
+        "id": "67",
         "score": 0.44374302
       },
       {
-        "merchant": "test",
-        "product_id": "78",
+        "id": "78",
         "score": 0.46998549
       },
       {
-        "merchant": "test",
-        "product_id": "80",
+        "id": "80",
         "score": 0.52547354
       },
       {
-        "merchant": "test",
-        "product_id": "74",
+        "id": "74",
         "score": 0.5535441
       },
       {
-        "merchant": "test",
-        "product_id": "70",
+        "id": "70",
         "score": 0.5685879
       },
       {
-        "merchant": "test",
-        "product_id": "14",
+        "id": "14",
         "score": 0.5735267
       },
       {
-        "merchant": "test",
-        "product_id": "61",
+        "id": "61",
         "score": 0.58801603
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "19",
-    "product_relations": [
+    "id": "19",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "23",
+        "id": "23",
         "score": 0.43047228
       },
       {
-        "merchant": "test",
-        "product_id": "16",
+        "id": "16",
         "score": 0.465056
       },
       {
-        "merchant": "test",
-        "product_id": "71",
+        "id": "71",
         "score": 0.46577558
       },
       {
-        "merchant": "test",
-        "product_id": "18",
+        "id": "18",
         "score": 0.49405208
       },
       {
-        "merchant": "test",
-        "product_id": "88",
+        "id": "88",
         "score": 0.50947875
       },
       {
-        "merchant": "test",
-        "product_id": "98",
+        "id": "98",
         "score": 0.5485496
       },
       {
-        "merchant": "test",
-        "product_id": "86",
+        "id": "86",
         "score": 0.572202
       },
       {
-        "merchant": "test",
-        "product_id": "14",
+        "id": "14",
         "score": 0.5812487
       },
       {
-        "merchant": "test",
-        "product_id": "24",
+        "id": "24",
         "score": 0.5868742
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "60",
-    "product_relations": [
+    "id": "60",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "85",
+        "id": "85",
         "score": 0.39757586
       },
       {
-        "merchant": "test",
-        "product_id": "42",
+        "id": "42",
         "score": 0.4077536
       },
       {
-        "merchant": "test",
-        "product_id": "47",
+        "id": "47",
         "score": 0.41125554
       },
       {
-        "merchant": "test",
-        "product_id": "37",
+        "id": "37",
         "score": 0.41203073
       },
       {
-        "merchant": "test",
-        "product_id": "76",
+        "id": "76",
         "score": 0.41522828
       },
       {
-        "merchant": "test",
-        "product_id": "63",
+        "id": "63",
         "score": 0.44461375
       },
       {
-        "merchant": "test",
-        "product_id": "8",
+        "id": "8",
         "score": 0.46851334
       },
       {
-        "merchant": "test",
-        "product_id": "73",
+        "id": "73",
         "score": 0.469773
       },
       {
-        "merchant": "test",
-        "product_id": "0",
+        "id": "0",
         "score": 0.47997922
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "87",
-    "product_relations": [
+    "id": "87",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "69",
+        "id": "69",
         "score": 0.24616195
       },
       {
-        "merchant": "test",
-        "product_id": "74",
+        "id": "74",
         "score": 0.29975814
       },
       {
-        "merchant": "test",
-        "product_id": "39",
+        "id": "39",
         "score": 0.36824787
       },
       {
-        "merchant": "test",
-        "product_id": "4",
+        "id": "4",
         "score": 0.4109386
       },
       {
-        "merchant": "test",
-        "product_id": "96",
+        "id": "96",
         "score": 0.41880977
       },
       {
-        "merchant": "test",
-        "product_id": "1",
+        "id": "1",
         "score": 0.4271409
       },
       {
-        "merchant": "test",
-        "product_id": "29",
+        "id": "29",
         "score": 0.4310178
       },
       {
-        "merchant": "test",
-        "product_id": "84",
+        "id": "84",
         "score": 0.45191017
       },
       {
-        "merchant": "test",
-        "product_id": "47",
+        "id": "47",
         "score": 0.49686193
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "96",
-    "product_relations": [
+    "id": "96",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "84",
+        "id": "84",
         "score": 0.3396726
       },
       {
-        "merchant": "test",
-        "product_id": "99",
+        "id": "99",
         "score": 0.45910108
       },
       {
-        "merchant": "test",
-        "product_id": "4",
+        "id": "4",
         "score": 0.47202316
       },
       {
-        "merchant": "test",
-        "product_id": "97",
+        "id": "97",
         "score": 0.49231824
       },
       {
-        "merchant": "test",
-        "product_id": "31",
+        "id": "31",
         "score": 0.53974164
       },
       {
-        "merchant": "test",
-        "product_id": "48",
+        "id": "48",
         "score": 0.54036444
       },
       {
-        "merchant": "test",
-        "product_id": "6",
+        "id": "6",
         "score": 0.6046306
       },
       {
-        "merchant": "test",
-        "product_id": "75",
+        "id": "75",
         "score": 0.60669285
       },
       {
-        "merchant": "test",
-        "product_id": "43",
+        "id": "43",
         "score": 0.62905717
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "69",
-    "product_relations": [
+    "id": "69",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "87",
+        "id": "87",
         "score": 0.24616195
       },
       {
-        "merchant": "test",
-        "product_id": "1",
+        "id": "1",
         "score": 0.33637142
       },
       {
-        "merchant": "test",
-        "product_id": "74",
+        "id": "74",
         "score": 0.39537144
       },
       {
-        "merchant": "test",
-        "product_id": "39",
+        "id": "39",
         "score": 0.4121875
       },
       {
-        "merchant": "test",
-        "product_id": "60",
+        "id": "60",
         "score": 0.48253062
       },
       {
-        "merchant": "test",
-        "product_id": "62",
+        "id": "62",
         "score": 0.48280662
       },
       {
-        "merchant": "test",
-        "product_id": "29",
+        "id": "29",
         "score": 0.51381624
       },
       {
-        "merchant": "test",
-        "product_id": "64",
+        "id": "64",
         "score": 0.52073586
       },
       {
-        "merchant": "test",
-        "product_id": "53",
+        "id": "53",
         "score": 0.5502216
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "78",
-    "product_relations": [
+    "id": "78",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "98",
+        "id": "98",
         "score": 0.41665348
       },
       {
-        "merchant": "test",
-        "product_id": "70",
+        "id": "70",
         "score": 0.4507921
       },
       {
-        "merchant": "test",
-        "product_id": "67",
+        "id": "67",
         "score": 0.46169275
       },
       {
-        "merchant": "test",
-        "product_id": "28",
+        "id": "28",
         "score": 0.46998549
       },
       {
-        "merchant": "test",
-        "product_id": "74",
+        "id": "74",
         "score": 0.5151725
       },
       {
-        "merchant": "test",
-        "product_id": "18",
+        "id": "18",
         "score": 0.5228936
       },
       {
-        "merchant": "test",
-        "product_id": "16",
+        "id": "16",
         "score": 0.61174434
       },
       {
-        "merchant": "test",
-        "product_id": "88",
+        "id": "88",
         "score": 0.6254885
       },
       {
-        "merchant": "test",
-        "product_id": "14",
+        "id": "14",
         "score": 0.63061655
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "99",
-    "product_relations": [
+    "id": "99",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "84",
+        "id": "84",
         "score": 0.31096506
       },
       {
-        "merchant": "test",
-        "product_id": "97",
+        "id": "97",
         "score": 0.34157223
       },
       {
-        "merchant": "test",
-        "product_id": "43",
+        "id": "43",
         "score": 0.41837066
       },
       {
-        "merchant": "test",
-        "product_id": "89",
+        "id": "89",
         "score": 0.42556337
       },
       {
-        "merchant": "test",
-        "product_id": "96",
+        "id": "96",
         "score": 0.45910108
       },
       {
-        "merchant": "test",
-        "product_id": "48",
+        "id": "48",
         "score": 0.5088925
       },
       {
-        "merchant": "test",
-        "product_id": "31",
+        "id": "31",
         "score": 0.51633173
       },
       {
-        "merchant": "test",
-        "product_id": "35",
+        "id": "35",
         "score": 0.5327575
       },
       {
-        "merchant": "test",
-        "product_id": "21",
+        "id": "21",
         "score": 0.53931344
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "63",
-    "product_relations": [
+    "id": "63",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "76",
+        "id": "76",
         "score": 0.41617572
       },
       {
-        "merchant": "test",
-        "product_id": "60",
+        "id": "60",
         "score": 0.44461375
       },
       {
-        "merchant": "test",
-        "product_id": "85",
+        "id": "85",
         "score": 0.51159644
       },
       {
-        "merchant": "test",
-        "product_id": "45",
+        "id": "45",
         "score": 0.5135358
       },
       {
-        "merchant": "test",
-        "product_id": "31",
+        "id": "31",
         "score": 0.53783756
       },
       {
-        "merchant": "test",
-        "product_id": "42",
+        "id": "42",
         "score": 0.6158581
       },
       {
-        "merchant": "test",
-        "product_id": "48",
+        "id": "48",
         "score": 0.6326971
       },
       {
-        "merchant": "test",
-        "product_id": "43",
+        "id": "43",
         "score": 0.6392274
       },
       {
-        "merchant": "test",
-        "product_id": "47",
+        "id": "47",
         "score": 0.6518742
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "90",
-    "product_relations": [
+    "id": "90",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "43",
+        "id": "43",
         "score": 0.37711215
       },
       {
-        "merchant": "test",
-        "product_id": "65",
+        "id": "65",
         "score": 0.39514205
       },
       {
-        "merchant": "test",
-        "product_id": "3",
+        "id": "3",
         "score": 0.43151608
       },
       {
-        "merchant": "test",
-        "product_id": "46",
+        "id": "46",
         "score": 0.44396245
       },
       {
-        "merchant": "test",
-        "product_id": "85",
+        "id": "85",
         "score": 0.45032322
       },
       {
-        "merchant": "test",
-        "product_id": "36",
+        "id": "36",
         "score": 0.45864382
       },
       {
-        "merchant": "test",
-        "product_id": "8",
+        "id": "8",
         "score": 0.4944613
       },
       {
-        "merchant": "test",
-        "product_id": "55",
+        "id": "55",
         "score": 0.5040231
       },
       {
-        "merchant": "test",
-        "product_id": "64",
+        "id": "64",
         "score": 0.5058647
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "45",
-    "product_relations": [
+    "id": "45",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "59",
+        "id": "59",
         "score": 0.35627934
       },
       {
-        "merchant": "test",
-        "product_id": "48",
+        "id": "48",
         "score": 0.35633045
       },
       {
-        "merchant": "test",
-        "product_id": "97",
+        "id": "97",
         "score": 0.43355837
       },
       {
-        "merchant": "test",
-        "product_id": "89",
+        "id": "89",
         "score": 0.44494772
       },
       {
-        "merchant": "test",
-        "product_id": "43",
+        "id": "43",
         "score": 0.4726616
       },
       {
-        "merchant": "test",
-        "product_id": "31",
+        "id": "31",
         "score": 0.47556505
       },
       {
-        "merchant": "test",
-        "product_id": "55",
+        "id": "55",
         "score": 0.4864928
       },
       {
-        "merchant": "test",
-        "product_id": "63",
+        "id": "63",
         "score": 0.5135358
       },
       {
-        "merchant": "test",
-        "product_id": "83",
+        "id": "83",
         "score": 0.57402503
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "54",
-    "product_relations": [
+    "id": "54",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "40",
+        "id": "40",
         "score": 0.41966885
       },
       {
-        "merchant": "test",
-        "product_id": "94",
+        "id": "94",
         "score": 0.44448784
       },
       {
-        "merchant": "test",
-        "product_id": "1",
+        "id": "1",
         "score": 0.47875884
       },
       {
-        "merchant": "test",
-        "product_id": "3",
+        "id": "3",
         "score": 0.5003378
       },
       {
-        "merchant": "test",
-        "product_id": "55",
+        "id": "55",
         "score": 0.5044117
       },
       {
-        "merchant": "test",
-        "product_id": "32",
+        "id": "32",
         "score": 0.54463154
       },
       {
-        "merchant": "test",
-        "product_id": "10",
+        "id": "10",
         "score": 0.5501715
       },
       {
-        "merchant": "test",
-        "product_id": "62",
+        "id": "62",
         "score": 0.55716616
       },
       {
-        "merchant": "test",
-        "product_id": "69",
+        "id": "69",
         "score": 0.5761855
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "72",
-    "product_relations": [
+    "id": "72",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "94",
+        "id": "94",
         "score": 0.49605942
       },
       {
-        "merchant": "test",
-        "product_id": "40",
+        "id": "40",
         "score": 0.5571654
       },
       {
-        "merchant": "test",
-        "product_id": "25",
+        "id": "25",
         "score": 0.55837876
       },
       {
-        "merchant": "test",
-        "product_id": "10",
+        "id": "10",
         "score": 0.5709887
       },
       {
-        "merchant": "test",
-        "product_id": "81",
+        "id": "81",
         "score": 0.57271236
       },
       {
-        "merchant": "test",
-        "product_id": "58",
+        "id": "58",
         "score": 0.573057
       },
       {
-        "merchant": "test",
-        "product_id": "22",
+        "id": "22",
         "score": 0.58109754
       },
       {
-        "merchant": "test",
-        "product_id": "53",
+        "id": "53",
         "score": 0.5872621
       },
       {
-        "merchant": "test",
-        "product_id": "11",
+        "id": "11",
         "score": 0.60717565
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "81",
-    "product_relations": [
+    "id": "81",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "32",
+        "id": "32",
         "score": 0.3638913
       },
       {
-        "merchant": "test",
-        "product_id": "11",
+        "id": "11",
         "score": 0.45292392
       },
       {
-        "merchant": "test",
-        "product_id": "22",
+        "id": "22",
         "score": 0.4918963
       },
       {
-        "merchant": "test",
-        "product_id": "25",
+        "id": "25",
         "score": 0.49870953
       },
       {
-        "merchant": "test",
-        "product_id": "58",
+        "id": "58",
         "score": 0.52963513
       },
       {
-        "merchant": "test",
-        "product_id": "17",
+        "id": "17",
         "score": 0.54295087
       },
       {
-        "merchant": "test",
-        "product_id": "52",
+        "id": "52",
         "score": 0.5650689
       },
       {
-        "merchant": "test",
-        "product_id": "72",
+        "id": "72",
         "score": 0.57271236
       },
       {
-        "merchant": "test",
-        "product_id": "40",
+        "id": "40",
         "score": 0.64527005
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "27",
-    "product_relations": [
+    "id": "27",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "84",
+        "id": "84",
         "score": 0.44841576
       },
       {
-        "merchant": "test",
-        "product_id": "59",
+        "id": "59",
         "score": 0.47434345
       },
       {
-        "merchant": "test",
-        "product_id": "91",
+        "id": "91",
         "score": 0.48713827
       },
       {
-        "merchant": "test",
-        "product_id": "6",
+        "id": "6",
         "score": 0.5150762
       },
       {
-        "merchant": "test",
-        "product_id": "75",
+        "id": "75",
         "score": 0.52377033
       },
       {
-        "merchant": "test",
-        "product_id": "95",
+        "id": "95",
         "score": 0.5296768
       },
       {
-        "merchant": "test",
-        "product_id": "7",
+        "id": "7",
         "score": 0.5685801
       },
       {
-        "merchant": "test",
-        "product_id": "96",
+        "id": "96",
         "score": 0.6386008
       },
       {
-        "merchant": "test",
-        "product_id": "13",
+        "id": "13",
         "score": 0.6963503
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "36",
-    "product_relations": [
+    "id": "36",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "8",
+        "id": "8",
         "score": 0.2946378
       },
       {
-        "merchant": "test",
-        "product_id": "35",
+        "id": "35",
         "score": 0.31501833
       },
       {
-        "merchant": "test",
-        "product_id": "57",
+        "id": "57",
         "score": 0.3418742
       },
       {
-        "merchant": "test",
-        "product_id": "64",
+        "id": "64",
         "score": 0.3826609
       },
       {
-        "merchant": "test",
-        "product_id": "60",
+        "id": "60",
         "score": 0.39652747
       },
       {
-        "merchant": "test",
-        "product_id": "3",
+        "id": "3",
         "score": 0.4444844
       },
       {
-        "merchant": "test",
-        "product_id": "0",
+        "id": "0",
         "score": 0.44476253
       },
       {
-        "merchant": "test",
-        "product_id": "15",
+        "id": "15",
         "score": 0.45058456
       },
       {
-        "merchant": "test",
-        "product_id": "76",
+        "id": "76",
         "score": 0.47937268
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "9",
-    "product_relations": [
+    "id": "9",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "5",
+        "id": "5",
         "score": 0.35813367
       },
       {
-        "merchant": "test",
-        "product_id": "61",
+        "id": "61",
         "score": 0.3647654
       },
       {
-        "merchant": "test",
-        "product_id": "57",
+        "id": "57",
         "score": 0.44705477
       },
       {
-        "merchant": "test",
-        "product_id": "44",
+        "id": "44",
         "score": 0.48767656
       },
       {
-        "merchant": "test",
-        "product_id": "38",
+        "id": "38",
         "score": 0.5037491
       },
       {
-        "merchant": "test",
-        "product_id": "34",
+        "id": "34",
         "score": 0.5394456
       },
       {
-        "merchant": "test",
-        "product_id": "24",
+        "id": "24",
         "score": 0.5590231
       },
       {
-        "merchant": "test",
-        "product_id": "41",
+        "id": "41",
         "score": 0.5636435
       },
       {
-        "merchant": "test",
-        "product_id": "77",
+        "id": "77",
         "score": 0.5766036
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "18",
-    "product_relations": [
+    "id": "18",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "16",
+        "id": "16",
         "score": 0.31212157
       },
       {
-        "merchant": "test",
-        "product_id": "88",
+        "id": "88",
         "score": 0.36953112
       },
       {
-        "merchant": "test",
-        "product_id": "23",
+        "id": "23",
         "score": 0.3853868
       },
       {
-        "merchant": "test",
-        "product_id": "14",
+        "id": "14",
         "score": 0.42759162
       },
       {
-        "merchant": "test",
-        "product_id": "98",
+        "id": "98",
         "score": 0.46712554
       },
       {
-        "merchant": "test",
-        "product_id": "24",
+        "id": "24",
         "score": 0.48696697
       },
       {
-        "merchant": "test",
-        "product_id": "19",
+        "id": "19",
         "score": 0.49405208
       },
       {
-        "merchant": "test",
-        "product_id": "67",
+        "id": "67",
         "score": 0.5110102
       },
       {
-        "merchant": "test",
-        "product_id": "71",
+        "id": "71",
         "score": 0.5152054
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "48",
-    "product_relations": [
+    "id": "48",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "97",
+        "id": "97",
         "score": 0.32595795
       },
       {
-        "merchant": "test",
-        "product_id": "45",
+        "id": "45",
         "score": 0.35633045
       },
       {
-        "merchant": "test",
-        "product_id": "83",
+        "id": "83",
         "score": 0.36208823
       },
       {
-        "merchant": "test",
-        "product_id": "89",
+        "id": "89",
         "score": 0.39206606
       },
       {
-        "merchant": "test",
-        "product_id": "55",
+        "id": "55",
         "score": 0.41094348
       },
       {
-        "merchant": "test",
-        "product_id": "65",
+        "id": "65",
         "score": 0.44323188
       },
       {
-        "merchant": "test",
-        "product_id": "31",
+        "id": "31",
         "score": 0.44673654
       },
       {
-        "merchant": "test",
-        "product_id": "30",
+        "id": "30",
         "score": 0.44747052
       },
       {
-        "merchant": "test",
-        "product_id": "59",
+        "id": "59",
         "score": 0.4645573
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "21",
-    "product_relations": [
+    "id": "21",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "29",
+        "id": "29",
         "score": 0.2779823
       },
       {
-        "merchant": "test",
-        "product_id": "20",
+        "id": "20",
         "score": 0.39465398
       },
       {
-        "merchant": "test",
-        "product_id": "11",
+        "id": "11",
         "score": 0.41180086
       },
       {
-        "merchant": "test",
-        "product_id": "39",
+        "id": "39",
         "score": 0.42178637
       },
       {
-        "merchant": "test",
-        "product_id": "35",
+        "id": "35",
         "score": 0.46954098
       },
       {
-        "merchant": "test",
-        "product_id": "68",
+        "id": "68",
         "score": 0.51278293
       },
       {
-        "merchant": "test",
-        "product_id": "6",
+        "id": "6",
         "score": 0.5313774
       },
       {
-        "merchant": "test",
-        "product_id": "1",
+        "id": "1",
         "score": 0.5331946
       },
       {
-        "merchant": "test",
-        "product_id": "41",
+        "id": "41",
         "score": 0.5467739
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "57",
-    "product_relations": [
+    "id": "57",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "41",
+        "id": "41",
         "score": 0.2932289
       },
       {
-        "merchant": "test",
-        "product_id": "61",
+        "id": "61",
         "score": 0.31888646
       },
       {
-        "merchant": "test",
-        "product_id": "36",
+        "id": "36",
         "score": 0.3418742
       },
       {
-        "merchant": "test",
-        "product_id": "8",
+        "id": "8",
         "score": 0.36327073
       },
       {
-        "merchant": "test",
-        "product_id": "55",
+        "id": "55",
         "score": 0.38060245
       },
       {
-        "merchant": "test",
-        "product_id": "60",
+        "id": "60",
         "score": 0.39971477
       },
       {
-        "merchant": "test",
-        "product_id": "34",
+        "id": "34",
         "score": 0.40635762
       },
       {
-        "merchant": "test",
-        "product_id": "65",
+        "id": "65",
         "score": 0.43022192
       },
       {
-        "merchant": "test",
-        "product_id": "42",
+        "id": "42",
         "score": 0.43724284
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "12",
-    "product_relations": [
+    "id": "12",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "6",
+        "id": "6",
         "score": 0.37808874
       },
       {
-        "merchant": "test",
-        "product_id": "20",
+        "id": "20",
         "score": 0.5132025
       },
       {
-        "merchant": "test",
-        "product_id": "95",
+        "id": "95",
         "score": 0.5366744
       },
       {
-        "merchant": "test",
-        "product_id": "11",
+        "id": "11",
         "score": 0.5370332
       },
       {
-        "merchant": "test",
-        "product_id": "56",
+        "id": "56",
         "score": 0.5630972
       },
       {
-        "merchant": "test",
-        "product_id": "21",
+        "id": "21",
         "score": 0.59058535
       },
       {
-        "merchant": "test",
-        "product_id": "66",
+        "id": "66",
         "score": 0.6119266
       },
       {
-        "merchant": "test",
-        "product_id": "68",
+        "id": "68",
         "score": 0.62116677
       },
       {
-        "merchant": "test",
-        "product_id": "7",
+        "id": "7",
         "score": 0.6578715
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "3",
-    "product_relations": [
+    "id": "3",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "8",
+        "id": "8",
         "score": 0.4210168
       },
       {
-        "merchant": "test",
-        "product_id": "98",
+        "id": "98",
         "score": 0.44011953
       },
       {
-        "merchant": "test",
-        "product_id": "82",
+        "id": "82",
         "score": 0.44271177
       },
       {
-        "merchant": "test",
-        "product_id": "36",
+        "id": "36",
         "score": 0.4444844
       },
       {
-        "merchant": "test",
-        "product_id": "40",
+        "id": "40",
         "score": 0.46290913
       },
       {
-        "merchant": "test",
-        "product_id": "64",
+        "id": "64",
         "score": 0.48496485
       },
       {
-        "merchant": "test",
-        "product_id": "55",
+        "id": "55",
         "score": 0.487798
       },
       {
-        "merchant": "test",
-        "product_id": "1",
+        "id": "1",
         "score": 0.4926915
       },
       {
-        "merchant": "test",
-        "product_id": "54",
+        "id": "54",
         "score": 0.5003378
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "84",
-    "product_relations": [
+    "id": "84",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "99",
+        "id": "99",
         "score": 0.31096506
       },
       {
-        "merchant": "test",
-        "product_id": "96",
+        "id": "96",
         "score": 0.3396726
       },
       {
-        "merchant": "test",
-        "product_id": "27",
+        "id": "27",
         "score": 0.44841576
       },
       {
-        "merchant": "test",
-        "product_id": "97",
+        "id": "97",
         "score": 0.45043597
       },
       {
-        "merchant": "test",
-        "product_id": "31",
+        "id": "31",
         "score": 0.47909054
       },
       {
-        "merchant": "test",
-        "product_id": "75",
+        "id": "75",
         "score": 0.48990253
       },
       {
-        "merchant": "test",
-        "product_id": "48",
+        "id": "48",
         "score": 0.49676526
       },
       {
-        "merchant": "test",
-        "product_id": "89",
+        "id": "89",
         "score": 0.52498096
       },
       {
-        "merchant": "test",
-        "product_id": "43",
+        "id": "43",
         "score": 0.53812826
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "93",
-    "product_relations": [
+    "id": "93",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "98",
+        "id": "98",
         "score": 0.27520326
       },
       {
-        "merchant": "test",
-        "product_id": "70",
+        "id": "70",
         "score": 0.45846045
       },
       {
-        "merchant": "test",
-        "product_id": "49",
+        "id": "49",
         "score": 0.45979056
       },
       {
-        "merchant": "test",
-        "product_id": "5",
+        "id": "5",
         "score": 0.52374876
       },
       {
-        "merchant": "test",
-        "product_id": "61",
+        "id": "61",
         "score": 0.52496403
       },
       {
-        "merchant": "test",
-        "product_id": "74",
+        "id": "74",
         "score": 0.53962934
       },
       {
-        "merchant": "test",
-        "product_id": "78",
+        "id": "78",
         "score": 0.560523
       },
       {
-        "merchant": "test",
-        "product_id": "3",
+        "id": "3",
         "score": 0.5689133
       },
       {
-        "merchant": "test",
-        "product_id": "64",
+        "id": "64",
         "score": 0.5969078
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "75",
-    "product_relations": [
+    "id": "75",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "31",
+        "id": "31",
         "score": 0.3629407
       },
       {
-        "merchant": "test",
-        "product_id": "84",
+        "id": "84",
         "score": 0.48990253
       },
       {
-        "merchant": "test",
-        "product_id": "4",
+        "id": "4",
         "score": 0.51272434
       },
       {
-        "merchant": "test",
-        "product_id": "27",
+        "id": "27",
         "score": 0.52377033
       },
       {
-        "merchant": "test",
-        "product_id": "97",
+        "id": "97",
         "score": 0.5347144
       },
       {
-        "merchant": "test",
-        "product_id": "13",
+        "id": "13",
         "score": 0.57043934
       },
       {
-        "merchant": "test",
-        "product_id": "59",
+        "id": "59",
         "score": 0.5745058
       },
       {
-        "merchant": "test",
-        "product_id": "99",
+        "id": "99",
         "score": 0.58927965
       },
       {
-        "merchant": "test",
-        "product_id": "96",
+        "id": "96",
         "score": 0.60669285
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "30",
-    "product_relations": [
+    "id": "30",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "65",
+        "id": "65",
         "score": 0.39974692
       },
       {
-        "merchant": "test",
-        "product_id": "42",
+        "id": "42",
         "score": 0.44392228
       },
       {
-        "merchant": "test",
-        "product_id": "48",
+        "id": "48",
         "score": 0.44747052
       },
       {
-        "merchant": "test",
-        "product_id": "89",
+        "id": "89",
         "score": 0.46618724
       },
       {
-        "merchant": "test",
-        "product_id": "57",
+        "id": "57",
         "score": 0.5101649
       },
       {
-        "merchant": "test",
-        "product_id": "83",
+        "id": "83",
         "score": 0.51753056
       },
       {
-        "merchant": "test",
-        "product_id": "35",
+        "id": "35",
         "score": 0.5219775
       },
       {
-        "merchant": "test",
-        "product_id": "36",
+        "id": "36",
         "score": 0.52503484
       },
       {
-        "merchant": "test",
-        "product_id": "33",
+        "id": "33",
         "score": 0.5483559
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "39",
-    "product_relations": [
+    "id": "39",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "29",
+        "id": "29",
         "score": 0.29817957
       },
       {
-        "merchant": "test",
-        "product_id": "87",
+        "id": "87",
         "score": 0.36824787
       },
       {
-        "merchant": "test",
-        "product_id": "1",
+        "id": "1",
         "score": 0.37429753
       },
       {
-        "merchant": "test",
-        "product_id": "35",
+        "id": "35",
         "score": 0.37692183
       },
       {
-        "merchant": "test",
-        "product_id": "69",
+        "id": "69",
         "score": 0.4121875
       },
       {
-        "merchant": "test",
-        "product_id": "74",
+        "id": "74",
         "score": 0.41268337
       },
       {
-        "merchant": "test",
-        "product_id": "21",
+        "id": "21",
         "score": 0.42178637
       },
       {
-        "merchant": "test",
-        "product_id": "55",
+        "id": "55",
         "score": 0.46199185
       },
       {
-        "merchant": "test",
-        "product_id": "54",
+        "id": "54",
         "score": 0.555108
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "66",
-    "product_relations": [
+    "id": "66",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "95",
+        "id": "95",
         "score": 0.4236613
       },
       {
-        "merchant": "test",
-        "product_id": "68",
+        "id": "68",
         "score": 0.48018068
       },
       {
-        "merchant": "test",
-        "product_id": "11",
+        "id": "11",
         "score": 0.56590915
       },
       {
-        "merchant": "test",
-        "product_id": "91",
+        "id": "91",
         "score": 0.5897515
       },
       {
-        "merchant": "test",
-        "product_id": "56",
+        "id": "56",
         "score": 0.6016523
       },
       {
-        "merchant": "test",
-        "product_id": "41",
+        "id": "41",
         "score": 0.6119217
       },
       {
-        "merchant": "test",
-        "product_id": "12",
+        "id": "12",
         "score": 0.6119266
       },
       {
-        "merchant": "test",
-        "product_id": "6",
+        "id": "6",
         "score": 0.61383367
       },
       {
-        "merchant": "test",
-        "product_id": "13",
+        "id": "13",
         "score": 0.634215
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "15",
-    "product_relations": [
+    "id": "15",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "35",
+        "id": "35",
         "score": 0.43565428
       },
       {
-        "merchant": "test",
-        "product_id": "36",
+        "id": "36",
         "score": 0.45058456
       },
       {
-        "merchant": "test",
-        "product_id": "57",
+        "id": "57",
         "score": 0.506012
       },
       {
-        "merchant": "test",
-        "product_id": "79",
+        "id": "79",
         "score": 0.55457556
       },
       {
-        "merchant": "test",
-        "product_id": "60",
+        "id": "60",
         "score": 0.56824934
       },
       {
-        "merchant": "test",
-        "product_id": "0",
+        "id": "0",
         "score": 0.61822486
       },
       {
-        "merchant": "test",
-        "product_id": "42",
+        "id": "42",
         "score": 0.6314054
       },
       {
-        "merchant": "test",
-        "product_id": "37",
+        "id": "37",
         "score": 0.65638036
       },
       {
-        "merchant": "test",
-        "product_id": "76",
+        "id": "76",
         "score": 0.6635722
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "42",
-    "product_relations": [
+    "id": "42",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "65",
+        "id": "65",
         "score": 0.3502826
       },
       {
-        "merchant": "test",
-        "product_id": "85",
+        "id": "85",
         "score": 0.36952856
       },
       {
-        "merchant": "test",
-        "product_id": "60",
+        "id": "60",
         "score": 0.4077536
       },
       {
-        "merchant": "test",
-        "product_id": "57",
+        "id": "57",
         "score": 0.43724284
       },
       {
-        "merchant": "test",
-        "product_id": "30",
+        "id": "30",
         "score": 0.44392228
       },
       {
-        "merchant": "test",
-        "product_id": "0",
+        "id": "0",
         "score": 0.46171862
       },
       {
-        "merchant": "test",
-        "product_id": "79",
+        "id": "79",
         "score": 0.468062
       },
       {
-        "merchant": "test",
-        "product_id": "76",
+        "id": "76",
         "score": 0.53505427
       },
       {
-        "merchant": "test",
-        "product_id": "36",
+        "id": "36",
         "score": 0.549179
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "51",
-    "product_relations": [
+    "id": "51",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "73",
+        "id": "73",
         "score": 0.50000936
       },
       {
-        "merchant": "test",
-        "product_id": "11",
+        "id": "11",
         "score": 0.5054397
       },
       {
-        "merchant": "test",
-        "product_id": "87",
+        "id": "87",
         "score": 0.5098087
       },
       {
-        "merchant": "test",
-        "product_id": "29",
+        "id": "29",
         "score": 0.5149089
       },
       {
-        "merchant": "test",
-        "product_id": "58",
+        "id": "58",
         "score": 0.5207211
       },
       {
-        "merchant": "test",
-        "product_id": "74",
+        "id": "74",
         "score": 0.5942976
       },
       {
-        "merchant": "test",
-        "product_id": "22",
+        "id": "22",
         "score": 0.5955605
       },
       {
-        "merchant": "test",
-        "product_id": "69",
+        "id": "69",
         "score": 0.6181106
       },
       {
-        "merchant": "test",
-        "product_id": "81",
+        "id": "81",
         "score": 0.6492145
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "33",
-    "product_relations": [
+    "id": "33",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "83",
+        "id": "83",
         "score": 0.43288755
       },
       {
-        "merchant": "test",
-        "product_id": "8",
+        "id": "8",
         "score": 0.46374196
       },
       {
-        "merchant": "test",
-        "product_id": "76",
+        "id": "76",
         "score": 0.46887457
       },
       {
-        "merchant": "test",
-        "product_id": "89",
+        "id": "89",
         "score": 0.5094971
       },
       {
-        "merchant": "test",
-        "product_id": "46",
+        "id": "46",
         "score": 0.5103397
       },
       {
-        "merchant": "test",
-        "product_id": "48",
+        "id": "48",
         "score": 0.52614504
       },
       {
-        "merchant": "test",
-        "product_id": "32",
+        "id": "32",
         "score": 0.5482012
       },
       {
-        "merchant": "test",
-        "product_id": "30",
+        "id": "30",
         "score": 0.5483559
       },
       {
-        "merchant": "test",
-        "product_id": "60",
+        "id": "60",
         "score": 0.55508554
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "24",
-    "product_relations": [
+    "id": "24",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "71",
+        "id": "71",
         "score": 0.37640166
       },
       {
-        "merchant": "test",
-        "product_id": "23",
+        "id": "23",
         "score": 0.4403921
       },
       {
-        "merchant": "test",
-        "product_id": "18",
+        "id": "18",
         "score": 0.48696697
       },
       {
-        "merchant": "test",
-        "product_id": "88",
+        "id": "88",
         "score": 0.54549366
       },
       {
-        "merchant": "test",
-        "product_id": "9",
+        "id": "9",
         "score": 0.5590231
       },
       {
-        "merchant": "test",
-        "product_id": "61",
+        "id": "61",
         "score": 0.5848734
       },
       {
-        "merchant": "test",
-        "product_id": "19",
+        "id": "19",
         "score": 0.5868742
       },
       {
-        "merchant": "test",
-        "product_id": "16",
+        "id": "16",
         "score": 0.5986332
       },
       {
-        "merchant": "test",
-        "product_id": "67",
+        "id": "67",
         "score": 0.6302965
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "6",
-    "product_relations": [
+    "id": "6",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "12",
+        "id": "12",
         "score": 0.37808874
       },
       {
-        "merchant": "test",
-        "product_id": "95",
+        "id": "95",
         "score": 0.3807003
       },
       {
-        "merchant": "test",
-        "product_id": "91",
+        "id": "91",
         "score": 0.45103025
       },
       {
-        "merchant": "test",
-        "product_id": "7",
+        "id": "7",
         "score": 0.46908405
       },
       {
-        "merchant": "test",
-        "product_id": "27",
+        "id": "27",
         "score": 0.5150762
       },
       {
-        "merchant": "test",
-        "product_id": "68",
+        "id": "68",
         "score": 0.5353914
       },
       {
-        "merchant": "test",
-        "product_id": "20",
+        "id": "20",
         "score": 0.5357639
       },
       {
-        "merchant": "test",
-        "product_id": "84",
+        "id": "84",
         "score": 0.54685384
       },
       {
-        "merchant": "test",
-        "product_id": "96",
+        "id": "96",
         "score": 0.6046306
       }
     ]
   },
   {
-    "merchant": "test",
-    "product_id": "0",
-    "product_relations": [
+    "id": "0",
+    "related": [
       {
-        "merchant": "test",
-        "product_id": "79",
+        "id": "79",
         "score": 0.3312431
       },
       {
-        "merchant": "test",
-        "product_id": "36",
+        "id": "36",
         "score": 0.44476253
       },
       {
-        "merchant": "test",
-        "product_id": "71",
+        "id": "71",
         "score": 0.46006352
       },
       {
-        "merchant": "test",
-        "product_id": "42",
+        "id": "42",
         "score": 0.46171862
       },
       {
-        "merchant": "test",
-        "product_id": "60",
+        "id": "60",
         "score": 0.47997922
       },
       {
-        "merchant": "test",
-        "product_id": "85",
+        "id": "85",
         "score": 0.5361002
       },
       {
-        "merchant": "test",
-        "product_id": "73",
+        "id": "73",
         "score": 0.5454876
       },
       {
-        "merchant": "test",
-        "product_id": "35",
+        "id": "35",
         "score": 0.5703579
       },
       {
-        "merchant": "test",
-        "product_id": "30",
+        "id": "30",
         "score": 0.579044
       }
     ]

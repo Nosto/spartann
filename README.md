@@ -10,7 +10,7 @@ Registry, [https://docs.github.com/en/packages/guides/configuring-gradle-for-use
 
 ## License
 
-Apache License
+Apache-2.0 License
 
 Copyright (c) 2021 Nosto
 

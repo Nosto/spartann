@@ -1,9 +1,9 @@
 package com.nosto.spartann
 
-case class MyEmbeddings(productId: String, vectors: Seq[Float])
+case class MyEmbeddings(id: String, vectors: Seq[Float])
   extends Embeddings[String] {
 
-  override def getId: String = productId
+  override def getId: String = id
 
   override def getVec: List[Float] = vectors.toList
 }

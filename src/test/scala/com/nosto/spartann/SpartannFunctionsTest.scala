@@ -2,6 +2,7 @@ package com.nosto.spartann
 
 import annoy4s.Angular
 import com.fasterxml.jackson.databind.ObjectMapper
+import com.fasterxml.jackson.module.scala.DefaultScalaModule
 import com.holdenkarau.spark.testing.SharedSparkContext
 import org.apache.spark.rdd.RDD
 import org.scalatest.funsuite.AnyFunSuite
@@ -12,7 +13,7 @@ import scala.io.Source
 class SpartannFunctionsTest extends AnyFunSuite with BetterRDDComparisons with SharedSparkContext {
 
   import spark.annFunctions
-  final val objectMapper: ObjectMapper = new ObjectMapper()
+  final val objectMapper: ObjectMapper = new ObjectMapper().registerModule(DefaultScalaModule)
   final val annoyConfig: AnnoyConfig = AnnoyConfig(2, 10, Angular)
 
   test("that finding relations using the Annoy job works") {
