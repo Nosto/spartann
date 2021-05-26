@@ -124,7 +124,7 @@ publishing {
     repositories {
         maven {
             name = "github"
-            url = uri("https://maven.pkg.github.com/mridang/spartann")
+            url = uri("https://maven.pkg.github.com/nosto/spartann")
             credentials(PasswordCredentials)
         }
     }
@@ -146,7 +146,7 @@ publishing {
                 //noinspection GroovyAssignabilityCheck
                 description = 'Add-on module for Jackson (https://jackson.codehaus.org) to support Elasticsearch mapping generation.'
                 //noinspection GroovyAssignabilityCheck
-                url = 'https://github.com/mridang/spartann'
+                url = 'https://github.com/nosto/spartann'
                 licenses {
                     license {
                         //noinspection GroovyAssignabilityCheck
@@ -159,17 +159,17 @@ publishing {
                 }
                 scm {
                     //noinspection GroovyAssignabilityCheck
-                    url = 'https://github.com/mridang/spartann'
+                    url = 'https://github.com/nosto/spartann'
                     //noinspection GroovyAssignabilityCheck
-                    connection = 'scm:git:git://github.com/mridang/spartann'
+                    connection = 'scm:git:git://github.com/nosto/spartann'
                     //noinspection GroovyAssignabilityCheck
-                    developerConnection = 'scm:git:git://github.com/mridang/spartann'
+                    developerConnection = 'scm:git:git://github.com/nosto/spartann'
                 }
                 issueManagement {
                     //noinspection GroovyAssignabilityCheck
                     system = "Github"
                     //noinspection GroovyAssignabilityCheck
-                    url = "https://github.com/mridang/spartann/issues"
+                    url = "https://github.com/nosto/spartann/issues"
                 }
                 developers {
                     developer {
