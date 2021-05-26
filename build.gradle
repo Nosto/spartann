@@ -48,6 +48,8 @@ dependencies {
     testRuntimeOnly 'com.vladsch.flexmark:flexmark-all:0.35.10'
     implementation group: 'org.scala-lang', name: 'scala-library', version: '2.12.13'
     implementation group: 'com.fasterxml.jackson.module', name: 'jackson-module-scala_2.12', version: '2.12.3'
+    implementation group: 'net.pishen', name: "annoy4s_2.12", version: '0.10.0'
+    implementation group: 'net.java.dev.jna', name: 'jna', version: '5.8.0'
     errorprone group: 'com.uber.nullaway', name: 'nullaway', version: '0.9.1'
     errorprone group: 'com.google.errorprone', name: 'error_prone_core', version: '2.6.0'
 }
