@@ -6,6 +6,8 @@ case class TestEmbeddings[IdType](id: IdType, vectors: Seq[java.lang.Float])
   override def getId: IdType = id
 
   override def getVec: List[Float] = {
-    vectors.map {_.floatValue() }.toList
+    vectors.map {
+      _.floatValue()
+    }.toList
   }
 }

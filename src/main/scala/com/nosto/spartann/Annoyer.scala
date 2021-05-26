@@ -60,8 +60,8 @@ object Annoyer extends LazyLogging {
    * @return an iterator of all the entries with the "n" nearest neighbours.
    */
   def create[IdType: ClassTag](allItems: Iterator[(Long, Embeddings[IdType])],
-                     annoyConfig: AnnoyConfig, verbose: Boolean = false, //TODO:
-                     maxResults: Int = 10):
+                               annoyConfig: AnnoyConfig, verbose: Boolean = false, //TODO:
+                               maxResults: Int = 10):
   Iterator[Neighbour[IdType]] = {
 
     val annoyIndex = annoyConfig.metric match {
@@ -77,7 +77,7 @@ object Annoyer extends LazyLogging {
       .foreach((item: (Long, Embeddings[IdType])) => {
         val vectors: Array[Float] = item._2.getVec.toArray
 
-        println(s"Adding item ${item._2} to index")
+        //println(s"Adding item ${item._2} to index")
         indexedItems.put(item._1.toInt, item._2.getId)
         annoyLib.addItem(annoyIndex, item._1.toInt, vectors)
       })

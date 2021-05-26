@@ -5,7 +5,8 @@ import org.apache.spark.rdd.RDD
 
 import scala.reflect.ClassTag
 
-class SpartannFunctions[T](dataRDD: RDD[_ <: Embeddings[T]])(implicit classTag: ClassTag[T]) {
+class SpartannFunctions[T](dataRDD: RDD[_ <: Embeddings[T]])(implicit classTag: ClassTag[T])
+  extends Serializable {
 
   def related(annoyConfig: AnnoyConfig): RDD[_ <: Neighbour[T]] = {
     // Fetches the relations for each tenant and joins it with
@@ -25,7 +26,7 @@ class SpartannFunctions[T](dataRDD: RDD[_ <: Embeddings[T]])(implicit classTag: 
               (iterator._2, iterator._1)
             }
 
-          println(s"Building Annoy index with ${annoyConfig.numTrees} trees")
+          //println(s"Building Annoy index with ${annoyConfig.numTrees} trees")
           Annoyer.create(vectors, annoyConfig)
         }
       }

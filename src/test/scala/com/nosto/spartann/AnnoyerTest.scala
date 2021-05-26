@@ -1,10 +1,12 @@
 package com.nosto.spartann
 
 import annoy4s.{Angular, Euclidean, Hamming, Manhattan}
-import org.scalatest.funsuite.AnyFunSuite
-import org.scalatest.matchers.should.Matchers.convertToAnyShouldWrapper
+import org.junit.runner.RunWith
+import org.scalatestplus.junit.JUnitRunner
+import org.scalatest.{FunSuite, Matchers}
 
-class AnnoyerTest extends AnyFunSuite {
+@RunWith(classOf[JUnitRunner])
+class AnnoyerTest extends FunSuite with Matchers {
 
   /**
    * Test the lookups via the Euclidean distance works as expected. This test

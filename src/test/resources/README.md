@@ -1,5 +1,4 @@
-The original file was fetched from https://github.com/annoy4s/annoy4s/blob/0.9.0/src/test/resources/searchk-test-vector and 
-then reshaped into JSON using `jq`
+The original file was fetched from https://github.com/annoy4s/annoy4s/blob/0.9.0/src/test/resources/searchk-test-vector and then reshaped into JSON using `jq`
 
 ```
 wget https://raw.githubusercontent.com/annoy4s/annoy4s/0.9.0/src/test/resources/searchk-test-vector

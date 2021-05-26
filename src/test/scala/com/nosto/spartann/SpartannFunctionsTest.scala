@@ -3,11 +3,14 @@ package com.nosto.spartann
 import annoy4s.Angular
 import com.holdenkarau.spark.testing.SharedSparkContext
 import org.apache.spark.rdd.RDD
-import org.scalatest.funsuite.AnyFunSuite
+import org.junit.runner.RunWith
+import org.scalatestplus.junit.JUnitRunner
 
-class SpartannFunctionsTest extends AnyFunSuite with BetterRDDComparisons with SharedSparkContext {
+@RunWith(classOf[JUnitRunner])
+class SpartannFunctionsTest extends BetterRDDComparisons with SharedSparkContext {
 
   import spark.annFunctions
+
   final val annoyConfig: AnnoyConfig = AnnoyConfig(2, 10, Angular)
 
   test("that finding relations using the Annoy job works") {
