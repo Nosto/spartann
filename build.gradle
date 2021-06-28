@@ -1,214 +1,214 @@
-//noinspection GroovyAssignabilityCheck
-import org.gradle.api.tasks.testing.logging.TestLogEvent
-
-buildscript {
+    //noinspection GroovyAssignabilityCheck
+    import org.gradle.api.tasks.testing.logging.TestLogEvent
+    
     buildscript {
-        repositories {
-            google()
-            mavenCentral()
-            gradlePluginPortal()
+        buildscript {
+            repositories {
+                google()
+                mavenCentral()
+                gradlePluginPortal()
+            }
+            dependencies {
+                classpath "org.github.ngbinh.scalastyle:gradle-scalastyle-plugin_2.11:1.0.1"
+                classpath "net.ltgt.gradle:gradle-errorprone-plugin:2.0.1"
+                classpath "net.ltgt.gradle:gradle-nullaway-plugin:1.1.0"
+                classpath "gradle.plugin.com.dorongold.plugins:task-tree:1.5"
+                classpath 'gradle.plugin.com.github.jengelman.gradle.plugins:shadow:7.0.0'
+            }
         }
-        dependencies {
-            classpath "org.github.ngbinh.scalastyle:gradle-scalastyle-plugin_2.11:1.0.1"
-            classpath "net.ltgt.gradle:gradle-errorprone-plugin:2.0.1"
-            classpath "net.ltgt.gradle:gradle-nullaway-plugin:1.1.0"
-            classpath "gradle.plugin.com.dorongold.plugins:task-tree:1.5"
-            classpath 'gradle.plugin.com.github.jengelman.gradle.plugins:shadow:7.0.0'
-        }
     }
-}
-
-
-apply plugin: 'java'
-apply plugin: 'scalaStyle'
-apply plugin: 'scala'
-apply plugin: 'maven-publish'
-apply plugin: 'java-library'
-apply plugin: 'net.ltgt.errorprone'
-apply plugin: 'net.ltgt.nullaway'
-apply plugin: "com.dorongold.task-tree"
-apply plugin: "jacoco"
-apply plugin: 'com.github.johnrengelman.shadow'
-
-group 'com.nosto'
-version '0.0.2'
-
-repositories {
-    mavenCentral()
-}
-
-dependencies {
-    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter', version: '5.7.1'
-    testImplementation group: 'org.scalatest', name: 'scalatest_2.12', version: '3.0.9'
-    testRuntimeOnly 'org.scala-lang.modules:scala-xml_2.12:1.2.0'
-    testRuntimeOnly 'com.vladsch.flexmark:flexmark-all:0.35.10'
-    implementation group: 'org.scala-lang', name: 'scala-library', version: '2.12.12'
-    implementation group: 'net.pishen', name: "annoy4s_2.12", version: '0.10.0'
-    implementation group: 'net.java.dev.jna', name: 'jna', version: '5.8.0'
-    implementation group: 'org.apache.spark', name: "spark-core_2.12", version: '3.0.0'
-    testImplementation group: 'com.holdenkarau', name: "spark-testing-base_2.12", version: '3.0.0_1.0.0'
-    testImplementation group: 'com.fasterxml.jackson.module', name: 'jackson-module-scala_2.12', version: '2.12.3'
-    errorprone group: 'com.uber.nullaway', name: 'nullaway', version: '0.9.1'
-    errorprone group: 'com.google.errorprone', name: 'error_prone_core', version: '2.6.0'
-}
-
-// Configuration for the nullaway extension. The rest of the parameters must be
-// specified on the java-compile tasks. The only option that be specified here
-// is the name of the root package to be analysed.
-nullaway {
-    //noinspection GrUnresolvedAccess
-    annotatedPackages.add("com.nosto")
-}
-
-// Configuration for the Scalastyle plugin. It seems that it isn't possible to define
-// the output report formats here and those seem to be defined on the individual
-// task level.
-scalaStyle {
-    configLocation "project/scalastyle_config.xml"
-}
-
-// Configuration for the Jacoco plugin. It seems that it isn't possible to define
-// the output report formats here and those seem to be defined on the individual
-// task level.
-// I'm not sure why the tool version is defined here and it isn't managed as a
-// dependency.
-jacoco {
-    toolVersion = "0.8.5"
-}
-
-// We only need the XML report so that the CI tools can parse it. The HTML isn't needed.
-jacocoTestReport {
-    reports {
-        csv.enabled = true
-        xml.enabled = false
-        html.enabled = true
-    }
-}
-
-test {
-    testLogging.events.addAll([TestLogEvent.PASSED, TestLogEvent.SKIPPED, TestLogEvent.FAILED])
-    reports {
-        junitXml.enabled = true
-        html.enabled = true
-    }
-    finalizedBy jacocoTestReport // report is always generated after tests run
-}
-
-jacocoTestReport {
-    dependsOn test // tests are required to run before generating the report
-}
-
-javadoc {
-    options.addBooleanOption('html5', true)
-}
-
-scaladoc {
-    scalaDocOptions.additionalParameters = ['-no-link-warnings']
-}
-
-task sourcesJar(type: Jar, dependsOn: classes) {
-    archiveClassifier.set("sources")
-    from sourceSets.main.allSource
-}
-
-task scaladocJar(type: Jar, dependsOn: scaladoc) {
-    archiveClassifier.set("javadoc")
-    from scaladoc.destinationDir
-}
-
-artifacts {
-    archives sourcesJar
-    archives scaladocJar
-}
-
-publishing {
-    //noinspection GroovyAssignabilityCheck
+    
+    
+    apply plugin: 'java'
+    apply plugin: 'scalaStyle'
+    apply plugin: 'scala'
+    apply plugin: 'maven-publish'
+    apply plugin: 'java-library'
+    apply plugin: 'net.ltgt.errorprone'
+    apply plugin: 'net.ltgt.nullaway'
+    apply plugin: "com.dorongold.task-tree"
+    apply plugin: "jacoco"
+    apply plugin: 'com.github.johnrengelman.shadow'
+    
+    group 'com.nosto'
+    version '0.0.2'
+    
     repositories {
-        maven {
-            name = "github"
-            url = uri("https://maven.pkg.github.com/nosto/spartann")
-            credentials(PasswordCredentials)
+        mavenCentral()
+    }
+    
+    dependencies {
+        testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter', version: '5.7.1'
+        testImplementation group: 'org.scalatest', name: 'scalatest_2.12', version: '3.0.9'
+        testRuntimeOnly 'org.scala-lang.modules:scala-xml_2.12:1.2.0'
+        testRuntimeOnly 'com.vladsch.flexmark:flexmark-all:0.35.10'
+        implementation group: 'org.scala-lang', name: 'scala-library', version: '2.12.12'
+        implementation group: 'net.pishen', name: "annoy4s_2.12", version: '0.10.0'
+        implementation group: 'net.java.dev.jna', name: 'jna', version: '5.8.0'
+        implementation group: 'org.apache.spark', name: "spark-core_2.12", version: '3.0.0'
+        testImplementation group: 'com.holdenkarau', name: "spark-testing-base_2.12", version: '3.0.0_1.0.0'
+        testImplementation group: 'com.fasterxml.jackson.module', name: 'jackson-module-scala_2.12', version: '2.12.3'
+        errorprone group: 'com.uber.nullaway', name: 'nullaway', version: '0.9.1'
+        errorprone group: 'com.google.errorprone', name: 'error_prone_core', version: '2.6.0'
+    }
+    
+    // Configuration for the nullaway extension. The rest of the parameters must be
+    // specified on the java-compile tasks. The only option that be specified here
+    // is the name of the root package to be analysed.
+    nullaway {
+        //noinspection GrUnresolvedAccess
+        annotatedPackages.add("com.nosto")
+    }
+    
+    // Configuration for the Scalastyle plugin. It seems that it isn't possible to define
+    // the output report formats here and those seem to be defined on the individual
+    // task level.
+    scalaStyle {
+        configLocation "project/scalastyle_config.xml"
+    }
+    
+    // Configuration for the Jacoco plugin. It seems that it isn't possible to define
+    // the output report formats here and those seem to be defined on the individual
+    // task level.
+    // I'm not sure why the tool version is defined here and it isn't managed as a
+    // dependency.
+    jacoco {
+        toolVersion = "0.8.5"
+    }
+    
+    // We only need the XML report so that the CI tools can parse it. The HTML isn't needed.
+    jacocoTestReport {
+        reports {
+            csv.enabled = true
+            xml.enabled = false
+            html.enabled = true
         }
     }
-    //noinspection GroovyAssignabilityCheck
-    publications {
+    
+    test {
+        testLogging.events.addAll([TestLogEvent.PASSED, TestLogEvent.SKIPPED, TestLogEvent.FAILED])
+        reports {
+            junitXml.enabled = true
+            html.enabled = true
+        }
+        finalizedBy jacocoTestReport // report is always generated after tests run
+    }
+    
+    jacocoTestReport {
+        dependsOn test // tests are required to run before generating the report
+    }
+    
+    javadoc {
+        options.addBooleanOption('html5', true)
+    }
+    
+    scaladoc {
+        scalaDocOptions.additionalParameters = ['-no-link-warnings']
+    }
+    
+    task sourcesJar(type: Jar, dependsOn: classes) {
+        archiveClassifier.set("sources")
+        from sourceSets.main.allSource
+    }
+    
+    task scaladocJar(type: Jar, dependsOn: scaladoc) {
+        archiveClassifier.set("javadoc")
+        from scaladoc.destinationDir
+    }
+    
+    artifacts {
+        archives sourcesJar
+        archives scaladocJar
+    }
+    
+    publishing {
         //noinspection GroovyAssignabilityCheck
-        maven(MavenPublication) {
+        repositories {
+            maven {
+                name = "github"
+                url = uri("https://maven.pkg.github.com/nosto/spartann")
+                credentials(PasswordCredentials)
+            }
+        }
+        //noinspection GroovyAssignabilityCheck
+        publications {
             //noinspection GroovyAssignabilityCheck
-            from components.java
-
-            //noinspection GroovyAssignabilityCheck
-            artifact sourcesJar
-            //noinspection GroovyAssignabilityCheck
-            artifact scaladocJar
-
-            pom {
+            maven(MavenPublication) {
                 //noinspection GroovyAssignabilityCheck
-                name = 'spartann'
+                from components.java
+    
                 //noinspection GroovyAssignabilityCheck
-                description = 'Add-on module for Jackson (https://jackson.codehaus.org) to support Elasticsearch mapping generation.'
+                artifact sourcesJar
                 //noinspection GroovyAssignabilityCheck
-                url = 'https://github.com/nosto/spartann'
-                licenses {
-                    license {
-                        //noinspection GroovyAssignabilityCheck
-                        name = 'The Apache Software License, Version 2.0'
-                        //noinspection GroovyAssignabilityCheck
-                        url = 'https://www.apache.org/licenses/LICENSE-2.0.txt'
-                        //noinspection GroovyAssignabilityCheck
-                        distribution = 'repo'
-                    }
-                }
-                scm {
+                artifact scaladocJar
+    
+                pom {
+                    //noinspection GroovyAssignabilityCheck
+                    name = 'spartann'
+                    //noinspection GroovyAssignabilityCheck
+                    description = 'Add-on module for Jackson (https://jackson.codehaus.org) to support Elasticsearch mapping generation.'
                     //noinspection GroovyAssignabilityCheck
                     url = 'https://github.com/nosto/spartann'
-                    //noinspection GroovyAssignabilityCheck
-                    connection = 'scm:git:git://github.com/nosto/spartann'
-                    //noinspection GroovyAssignabilityCheck
-                    developerConnection = 'scm:git:git://github.com/nosto/spartann'
-                }
-                issueManagement {
-                    //noinspection GroovyAssignabilityCheck
-                    system = "Github"
-                    //noinspection GroovyAssignabilityCheck
-                    url = "https://github.com/nosto/spartann/issues"
-                }
-                developers {
-                    developer {
-                        //noinspection GroovyAssignabilityCheck
-                        id = 'mridang'
-                        //noinspection GroovyAssignabilityCheck
-                        name = 'Mridang Agarwalla'
-                        //noinspection GroovyAssignabilityCheck
-                        email = 'mridang.agarwalla@gmail.com'
+                    licenses {
+                        license {
+                            //noinspection GroovyAssignabilityCheck
+                            name = 'The Apache Software License, Version 2.0'
+                            //noinspection GroovyAssignabilityCheck
+                            url = 'https://www.apache.org/licenses/LICENSE-2.0.txt'
+                            //noinspection GroovyAssignabilityCheck
+                            distribution = 'repo'
+                        }
                     }
-                }
-                contributors {
-                    contributor {
+                    scm {
                         //noinspection GroovyAssignabilityCheck
-                        id = 'mridang'
+                        url = 'https://github.com/nosto/spartann'
                         //noinspection GroovyAssignabilityCheck
-                        name = 'Mridang Agarwalla'
+                        connection = 'scm:git:git://github.com/nosto/spartann'
                         //noinspection GroovyAssignabilityCheck
-                        email = 'mridang.agarwalla@gmail.com'
+                        developerConnection = 'scm:git:git://github.com/nosto/spartann'
+                    }
+                    issueManagement {
+                        //noinspection GroovyAssignabilityCheck
+                        system = "Github"
+                        //noinspection GroovyAssignabilityCheck
+                        url = "https://github.com/nosto/spartann/issues"
+                    }
+                    developers {
+                        developer {
+                            //noinspection GroovyAssignabilityCheck
+                            id = 'mridang'
+                            //noinspection GroovyAssignabilityCheck
+                            name = 'Mridang Agarwalla'
+                            //noinspection GroovyAssignabilityCheck
+                            email = 'mridang.agarwalla@gmail.com'
+                        }
+                    }
+                    contributors {
+                        contributor {
+                            //noinspection GroovyAssignabilityCheck
+                            id = 'mridang'
+                            //noinspection GroovyAssignabilityCheck
+                            name = 'Mridang Agarwalla'
+                            //noinspection GroovyAssignabilityCheck
+                            email = 'mridang.agarwalla@gmail.com'
+                        }
                     }
                 }
             }
         }
     }
-}
-
-// Task for building the zip file for upload
-task buildZip(type: Zip) {
-    zip64 = true
-    archiveBaseName.set(rootProject.name)
-    from compileJava
-    from processResources
-    into('lib') {
-        from configurations.runtimeClasspath
+    
+    // Task for building the zip file for upload
+    task buildZip(type: Zip) {
+        zip64 = true
+        archiveBaseName.set(rootProject.name)
+        from compileJava
+        from processResources
+        into('lib') {
+            from configurations.runtimeClasspath
+        }
     }
-}
-shadowJar {
-    zip64 true
-}
-build.dependsOn buildZip
+    shadowJar {
+        zip64 true
+    }
+    build.dependsOn buildZip
