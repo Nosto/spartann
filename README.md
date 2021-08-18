@@ -56,6 +56,16 @@ sc.parallelize(..)
   })
 ```
 
+## Caveats
+
+The current implementation doesn't allow on-disk Annoy indexes. Any upstream pull-requests that allow persisting indexes onto HDFS are welcome.
+
+The current implemenntation doesn't allow querying the nearest neighbours by vectors as represented by the API method `get_nns_by_vector`.
+
+The current implementation doesn't allow querying the distances between two items as represented by the API method `get_distance`.
+
+Methods such as setting the seed using `set_seed(int)`, querying the number of items using `get_n_items()`, querying the number of trees using `get_n_trees()` were deemed superflous and removed from SpartAnn. In the event that these are needed, upstream pull-requests are welcomed.
+
 ## Authors
 
 * Mridang Agarwalla <mridang@nosto.com>
