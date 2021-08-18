@@ -56,6 +56,10 @@ sc.parallelize(..)
   })
 ```
 
+## Authors
+
+* Mridang Agarwalla <mridang@nosto.com>
+
 ## License
 
 Apache-2.0 License
