@@ -24,7 +24,9 @@ final val annoyConfig: AnnoyConfig = AnnoyConfig(50, 256, annoy4s.Euclidean)
 
 `AnnoyConfig` accepts the number of trees, the dimensionality of the the data and the distance algorithm. An increase in the dimensionality or the number of tress will also degrade performance.
 
-#### In Dataframes
+Annoy indexes all items with a non-negative integer value and allocates memory for max(i)+1 items. As shown in both examples, the iterators are zipped so that each item is indexed. The order of the items is not relevant.
+
+### In Dataframes
 
 Assume you have a dataset of `Dataset[Book]` and you need to find the similar books published by a publisher. 
 
@@ -34,14 +36,14 @@ sqlContext.createDataset(records)(Encoders.kryo[Book])
   .mapPartitions((books: Iterator[Book]) => {
      val vectors: Iterator[(Long, Book)] = books.zipWithIndex.map(_.swap)
        .map(item => (item._1.toLong, item._2))
-     Annoyer.create(vectors, annoyConfig)
+     Annoyer.create(vectors, annoyConfig = annoyConfig, verbose = false, maxResults = 50)
   })(Encoders.kryo[Neighbour[String]])
   .show()
 ```
 
 ⚠ SpartAnn has been tested with `mapPartitions` and the code currently lacks comprehensive tests against `mapGroups`.
 
-#### In RDDs
+### In RDDs
 
 Assume you have a dataset of `RDD[Book]` and you need to find the similar books published by a publisher. 
 
@@ -49,11 +51,10 @@ Assume you have a dataset of `RDD[Book]` and you need to find the similar books 
 sc.parallelize(..)
   .mapPartitions((books: Iterator[Book]) => {
      val vectors: Iterator[(Long, Book)] = books.zipWithIndex.map(_.swap)
-       .map(d => (item._1.toLong, item._2))
-     Annoyer.create(vectors, annoyConfig)
+       .map(item => (item._1.toLong, item._2))
+     Annoyer.create(vectors, annoyConfig = annoyConfig, verbose = false, maxResults = 50)
   })
 ```
-
 
 ## License
 
