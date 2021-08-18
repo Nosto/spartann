@@ -1,6 +1,6 @@
 # Spartann
 
-Hyper performant kNN using Annoy for Apache Spark. 
+Hyper performant kNN using Annoy for Apache Spark. For some backgrorund reading, I recommend this good-read by Mridang Agarwalla https://medium.com/@mridang.agarwalla/f4757b2b10eb
 
 ## Installation
 
