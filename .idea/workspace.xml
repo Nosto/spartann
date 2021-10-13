@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef1827bf-749c-4b7b-b8a2-1e1c405340f9" name="Default Changelist" comment="Hardened the tests">
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +94,7 @@
     <option name="selectedIndex" value="2" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="ProjectId" id="1rekiqHEeesvY9hEX5L9WDYI8hk" />
   <component name="ProjectLevelVcsManager">
@@ -133,7 +135,7 @@
       <recent name="com.mridang.spartann" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.SpartannFunctionsTest">
+  <component name="RunManager" selected="Gradle.Tests in 'spartann'">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -184,7 +186,6 @@
         <option name="taskNames">
           <list />
         </option>
-        <option name="tasksAndArguments" value=":test --tests &quot;com.nosto.spartann.AnnoyerTest&quot;" />
         <option name="vmOptions" />
       </ExternalSystemSettings>
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
@@ -204,7 +205,6 @@
         <option name="taskNames">
           <list />
         </option>
-        <option name="tasksAndArguments" value=":test --tests &quot;com.mridang.spartann.MainSuite&quot;" />
         <option name="vmOptions" />
       </ExternalSystemSettings>
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
@@ -224,7 +224,29 @@
         <option name="taskNames">
           <list />
         </option>
-        <option name="tasksAndArguments" value=":test --tests &quot;com.nosto.spartann.SpartannFunctionsTest&quot;" />
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Tests in 'spartann'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.nosto.spartann.*&quot;" />
+          </list>
+        </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
@@ -244,7 +266,6 @@
         <option name="taskNames">
           <list />
         </option>
-        <option name="tasksAndArguments" value="publish" />
         <option name="vmOptions" />
       </ExternalSystemSettings>
       <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
@@ -264,9 +285,11 @@
       <item itemvalue="Gradle.spartann [publish]" />
       <item itemvalue="Gradle.AnnoyerTest" />
       <item itemvalue="Gradle.SpartannFunctionsTest" />
+      <item itemvalue="Gradle.Tests in 'spartann'" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Tests in 'spartann'" />
         <item itemvalue="Gradle.SpartannFunctionsTest" />
         <item itemvalue="Gradle.AnnoyerTest" />
         <item itemvalue="Gradle.MainSuite" />
@@ -341,7 +364,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
