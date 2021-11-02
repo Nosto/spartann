@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE suppressions [
+        <!ELEMENT suppressions (suppress*)>
+
+        <!ELEMENT suppress EMPTY>
+        <!ATTLIST suppress files CDATA #IMPLIED
+                checks CDATA #IMPLIED
+                message CDATA #IMPLIED
+                id CDATA #IMPLIED
+                lines CDATA #IMPLIED
+                columns CDATA #IMPLIED>
+        ]>
+
+<suppressions>
+    <!-- Suppress these checks for test code. -->
+    <suppress checks="MagicNumberCheck" files="/src/test/java"/>
+    <suppress checks="JavadocMethod" files="/src/test/java"/>
+    <suppress checks="JavadocType" files="/src/test/java"/>
+    <suppress checks="JavadocVariable" files="/src/test/java"/>
+    <suppress checks="JavadocStyle" files="/src/test/java"/>
+    <suppress checks="VisibilityModifier" files="/src/test/java"/>
+    <suppress checks="DesignForExtension" files="/src/test/java"/>
+</suppressions>
