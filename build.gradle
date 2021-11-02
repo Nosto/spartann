@@ -1,44 +1,44 @@
-//noinspection GroovyAssignabilityCheck
+//file:noinspection GrUnresolvedAccess
+//file:noinspection GroovyAssignabilityCheck
 import org.gradle.api.tasks.testing.logging.TestLogEvent
 
 buildscript {
-    buildscript {
-        repositories {
-            google()
-            mavenCentral()
-            gradlePluginPortal()
-        }
-        dependencies {
-            classpath "org.github.ngbinh.scalastyle:gradle-scalastyle-plugin_2.11:1.0.1"
-            classpath "net.ltgt.gradle:gradle-errorprone-plugin:2.0.1"
-            classpath "net.ltgt.gradle:gradle-nullaway-plugin:1.1.0"
-            classpath "gradle.plugin.com.dorongold.plugins:task-tree:1.5"
-            classpath 'gradle.plugin.com.github.jengelman.gradle.plugins:shadow:7.0.0'
-        }
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
     }
 }
 
-
-apply plugin: 'java'
-apply plugin: 'scalaStyle'
-apply plugin: 'scala'
-apply plugin: 'maven-publish'
-apply plugin: 'java-library'
-apply plugin: 'net.ltgt.errorprone'
-apply plugin: 'net.ltgt.nullaway'
-apply plugin: "com.dorongold.task-tree"
-apply plugin: "jacoco"
-apply plugin: 'com.github.johnrengelman.shadow'
+plugins {
+    id 'java'
+    id 'scala'
+    id 'checkstyle'
+    id 'maven-publish'
+    id 'java-library'
+    id "jacoco"
+    id "com.github.alisiikh.scalastyle" version "3.4.1"
+    id "com.github.johnrengelman.shadow" version "7.1.0"
+    id 'com.diffplug.spotless' version '5.0.0'
+    id "com.github.spotbugs" version "4.7.1"
+    id "net.ltgt.errorprone" version "2.0.1"
+    id 'net.ltgt.nullaway' version "1.1.0"
+    id "com.dorongold.task-tree" version "1.5"
+}
 
 group 'com.nosto'
-version '0.0.2'
+version '0.0.3'
 
 repositories {
     mavenCentral()
+    maven {
+        url 'https://maven.onehippo.com/maven2/'
+    }
 }
 
 dependencies {
-    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter', version: '5.7.1'
+    testRuntimeOnly group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.2.0'
+    testRuntimeOnly group: 'org.junit.vintage', name: 'junit-vintage-engine', version: '5.2.0'
     testImplementation group: 'org.scalatest', name: 'scalatest_2.12', version: '3.0.9'
     testRuntimeOnly 'org.scala-lang.modules:scala-xml_2.12:2.0.1'
     testRuntimeOnly 'com.vladsch.flexmark:flexmark-all:0.62.2'
@@ -48,8 +48,9 @@ dependencies {
     implementation group: 'org.apache.spark', name: "spark-core_2.12", version: '3.0.0'
     testImplementation group: 'com.holdenkarau', name: "spark-testing-base_2.12", version: '3.0.0_1.1.0'
     testImplementation group: 'com.fasterxml.jackson.module', name: 'jackson-module-scala_2.12', version: '2.12.3'
-    errorprone group: 'com.uber.nullaway', name: 'nullaway', version: '0.9.1'
-    errorprone group: 'com.google.errorprone', name: 'error_prone_core', version: '2.6.0'
+    errorprone group: 'com.uber.nullaway', name: 'nullaway', version: '0.7.9'
+    errorprone group: 'com.google.errorprone', name: 'error_prone_core', version: '2.3.4'
+    spotbugsPlugins group: 'com.h3xstream.findsecbugs', name: 'findsecbugs-plugin', version: '1.10.1'
 }
 
 // Configuration for the nullaway extension. The rest of the parameters must be
@@ -63,8 +64,8 @@ nullaway {
 // Configuration for the Scalastyle plugin. It seems that it isn't possible to define
 // the output report formats here and those seem to be defined on the individual
 // task level.
-scalaStyle {
-    configLocation "project/scalastyle_config.xml"
+scalastyle {
+    config file("$rootDir/gradle/config/scalastyle/scalastyle_config.xml")
 }
 
 // Configuration for the Jacoco plugin. It seems that it isn't possible to define
@@ -86,11 +87,13 @@ jacocoTestReport {
 }
 
 test {
+    useJUnitPlatform()
     testLogging.events.addAll([TestLogEvent.PASSED, TestLogEvent.SKIPPED, TestLogEvent.FAILED])
     reports {
         junitXml.enabled = true
         html.enabled = true
     }
+    maxParallelForks = (int) (Runtime.runtime.availableProcessors() / 2 + 1)
     finalizedBy jacocoTestReport // report is always generated after tests run
 }
 
@@ -121,8 +124,67 @@ artifacts {
     archives scaladocJar
 }
 
-publishing {
+// Configuration for the Spotbugs plugin. It seems that it isn't possible to define
+// the output report formats here and those seem to be defined on the individual
+// task level.
+// I'm not sure why the tool version is defined here and it isn't managed as a
+// dependency.
+spotbugs {
+    //noinspection GroovyAccessibility,GrFinalVariableAccess,GroovyAssignabilityCheck
+    toolVersion = '4.0.2'
+    //noinspection GroovyAccessibility,GrFinalVariableAccess,GroovyAssignabilityCheck
+    ignoreFailures = true
+    //noinspection GroovyAccessibility,GrFinalVariableAccess,GroovyAssignabilityCheck
+    effort = 'max'
+    // Exclude all *.scala files as Spotbugs doesn't work too well with Scala.
+    //noinspection GroovyAccessibility,GrFinalVariableAccess,GroovyAssignabilityCheck
+    excludeFilter = file("$rootDir/gradle/config/spotbugs/exclude.xml")
+}
+
+// We only need the XML report so that the CI tools can parse it. The HTML isn't needed.
+spotbugsMain {
     //noinspection GroovyAssignabilityCheck
+    reports {
+        xml.enabled = true
+    }
+}
+
+// We only need the XML report so that the CI tools can parse it. The HTML isn't needed.
+spotbugsTest {
+    //noinspection GroovyAssignabilityCheck
+    reports {
+        xml.enabled = true
+    }
+}
+
+// Configuration for the Checkstyle plugin. It seems that it isn't possible to define
+// the output report formats here and those seem to be defined on the individual
+// task level.
+// I'm not sure why the tool version is defined here and it isn't managed as a
+// dependency.
+checkstyle {
+    toolVersion "7.6.1"
+    config rootProject.resources.text.fromFile("gradle/config/checkstyle/checkstyle.xml")
+}
+
+// We only need the XML report so that the CI tools can parse it. The HTML isn't needed
+// and must be explicitly disabled
+checkstyleMain {
+    reports {
+        xml.enabled = true
+        html.enabled = false
+    }
+}
+
+// We only need the XML report so that the CI tools can parse it. The HTML isn't needed.
+checkstyleTest {
+    reports {
+        xml.enabled = true
+        html.enabled = false
+    }
+}
+
+publishing {
     repositories {
         maven {
             name = "github"
@@ -130,48 +192,28 @@ publishing {
             credentials(PasswordCredentials)
         }
     }
-    //noinspection GroovyAssignabilityCheck
     publications {
         //noinspection GroovyAssignabilityCheck
-        maven(MavenPublication) {
+        mavenJava(MavenPublication) {
             //noinspection GroovyAssignabilityCheck
             from components.java
 
-            //noinspection GroovyAssignabilityCheck
-            artifact sourcesJar
-            //noinspection GroovyAssignabilityCheck
-            artifact scaladocJar
-
             pom {
                 //noinspection GroovyAssignabilityCheck
-                name = 'spartann'
+                name = 'Spartann'
                 //noinspection GroovyAssignabilityCheck
-                description = 'Add-on module for Jackson (https://jackson.codehaus.org) to support Elasticsearch mapping generation.'
+                description = 'Hyper performant kNN using Annoy for Apache Spark.'
                 //noinspection GroovyAssignabilityCheck
                 url = 'https://github.com/nosto/spartann'
                 licenses {
                     license {
                         //noinspection GroovyAssignabilityCheck
-                        name = 'The Apache Software License, Version 2.0'
+                        name = 'The Apache License, Version 2.0'
                         //noinspection GroovyAssignabilityCheck
                         url = 'https://www.apache.org/licenses/LICENSE-2.0.txt'
                         //noinspection GroovyAssignabilityCheck
                         distribution = 'repo'
                     }
-                }
-                scm {
-                    //noinspection GroovyAssignabilityCheck
-                    url = 'https://github.com/nosto/spartann'
-                    //noinspection GroovyAssignabilityCheck
-                    connection = 'scm:git:git://github.com/nosto/spartann'
-                    //noinspection GroovyAssignabilityCheck
-                    developerConnection = 'scm:git:git://github.com/nosto/spartann'
-                }
-                issueManagement {
-                    //noinspection GroovyAssignabilityCheck
-                    system = "Github"
-                    //noinspection GroovyAssignabilityCheck
-                    url = "https://github.com/nosto/spartann/issues"
                 }
                 developers {
                     developer {
@@ -180,18 +222,22 @@ publishing {
                         //noinspection GroovyAssignabilityCheck
                         name = 'Mridang Agarwalla'
                         //noinspection GroovyAssignabilityCheck
-                        email = 'mridang.agarwalla@gmail.com'
+                        email = 'mridang.agarwalla@osto.com'
                     }
                 }
-                contributors {
-                    contributor {
-                        //noinspection GroovyAssignabilityCheck
-                        id = 'mridang'
-                        //noinspection GroovyAssignabilityCheck
-                        name = 'Mridang Agarwalla'
-                        //noinspection GroovyAssignabilityCheck
-                        email = 'mridang.agarwalla@gmail.com'
-                    }
+                scm {
+                    //noinspection GroovyAssignabilityCheck
+                    connection = 'scm:git:git://github.com/nosto/spartann.git'
+                    //noinspection GroovyAssignabilityCheck
+                    developerConnection = 'scm:git:ssh://github.com/nosto/spartann.git'
+                    //noinspection GroovyAssignabilityCheck
+                    url = 'https://github.com/nosto/spartann'
+                }
+                issueManagement {
+                    //noinspection GroovyAssignabilityCheck
+                    system = "Github"
+                    //noinspection GroovyAssignabilityCheck
+                    url = "https://github.com/nosto/spartann/issues"
                 }
             }
         }
@@ -213,7 +259,6 @@ shadowJar {
     zip64 true
 }
 
-//noinspection GrUnresolvedAccess
-build.dependsOn buildZip
-//noinspection GrUnresolvedAccess
-build.dependsOn shadowJar
+build {
+    dependsOn buildZip
+}
