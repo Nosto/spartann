@@ -103,6 +103,61 @@ object Using {
     Using.resource(resource)(f)
   }
 
+  /** Performs an operation using two resources, and then releases the resources
+   * in reverse order, even if the operation throws an exception. This method
+   * behaves similarly to Java's try-with-resources.
+   *
+   * $suppressionBehavior
+   *
+   * @param resource1 the first resource
+   * @param resource2 the second resource
+   * @param body      the operation to perform using the resources
+   * @tparam R1 the type of the first resource
+   * @tparam R2 the type of the second resource
+   * @tparam A  the return type of the operation
+   * @return the result of the operation, if neither the operation nor
+   *         releasing the resources throws
+   */
+  def resources[R1: Releasable, R2: Releasable, A](
+                                                    resource1: R1,
+                                                    resource2: => R2
+                                                  )(body: (R1, R2) => A): A =
+    resource(resource1) { r1 =>
+      resource(resource2) { r2 =>
+        body(r1, r2)
+      }
+    }
+
+  /** Performs an operation using three resources, and then releases the resources
+   * in reverse order, even if the operation throws an exception. This method
+   * behaves similarly to Java's try-with-resources.
+   *
+   * $suppressionBehavior
+   *
+   * @param resource1 the first resource
+   * @param resource2 the second resource
+   * @param resource3 the third resource
+   * @param body      the operation to perform using the resources
+   * @tparam R1 the type of the first resource
+   * @tparam R2 the type of the second resource
+   * @tparam R3 the type of the third resource
+   * @tparam A  the return type of the operation
+   * @return the result of the operation, if neither the operation nor
+   *         releasing the resources throws
+   */
+  def resources[R1: Releasable, R2: Releasable, R3: Releasable, A](
+                                                                    resource1: R1,
+                                                                    resource2: => R2,
+                                                                    resource3: => R3
+                                                                  )(body: (R1, R2, R3) => A): A =
+    resource(resource1) { r1 =>
+      resource(resource2) { r2 =>
+        resource(resource3) { r3 =>
+          body(r1, r2, r3)
+        }
+      }
+    }
+
   /** Performs an operation using a resource, and then releases the resource,
    * even if the operation throws an exception. This method behaves similarly
    * to Java's try-with-resources.
@@ -159,61 +214,6 @@ object Using {
     if (score(secondary) > score(primary)) suppress(secondary, primary)
     else suppress(primary, secondary)
   }
-
-  /** Performs an operation using two resources, and then releases the resources
-   * in reverse order, even if the operation throws an exception. This method
-   * behaves similarly to Java's try-with-resources.
-   *
-   * $suppressionBehavior
-   *
-   * @param resource1 the first resource
-   * @param resource2 the second resource
-   * @param body      the operation to perform using the resources
-   * @tparam R1 the type of the first resource
-   * @tparam R2 the type of the second resource
-   * @tparam A  the return type of the operation
-   * @return the result of the operation, if neither the operation nor
-   *         releasing the resources throws
-   */
-  def resources[R1: Releasable, R2: Releasable, A](
-                                                    resource1: R1,
-                                                    resource2: => R2
-                                                  )(body: (R1, R2) => A): A =
-    resource(resource1) { r1 =>
-      resource(resource2) { r2 =>
-        body(r1, r2)
-      }
-    }
-
-  /** Performs an operation using three resources, and then releases the resources
-   * in reverse order, even if the operation throws an exception. This method
-   * behaves similarly to Java's try-with-resources.
-   *
-   * $suppressionBehavior
-   *
-   * @param resource1 the first resource
-   * @param resource2 the second resource
-   * @param resource3 the third resource
-   * @param body      the operation to perform using the resources
-   * @tparam R1 the type of the first resource
-   * @tparam R2 the type of the second resource
-   * @tparam R3 the type of the third resource
-   * @tparam A  the return type of the operation
-   * @return the result of the operation, if neither the operation nor
-   *         releasing the resources throws
-   */
-  def resources[R1: Releasable, R2: Releasable, R3: Releasable, A](
-                                                                    resource1: R1,
-                                                                    resource2: => R2,
-                                                                    resource3: => R3
-                                                                  )(body: (R1, R2, R3) => A): A =
-    resource(resource1) { r1 =>
-      resource(resource2) { r2 =>
-        resource(resource3) { r3 =>
-          body(r1, r2, r3)
-        }
-      }
-    }
 
   /** Performs an operation using four resources, and then releases the resources
    * in reverse order, even if the operation throws an exception. This method

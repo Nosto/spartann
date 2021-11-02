@@ -2,8 +2,8 @@ package com.nosto.spartann
 
 import annoy4s.{Angular, Euclidean, Hamming, Manhattan}
 import org.junit.runner.RunWith
-import org.scalatestplus.junit.JUnitRunner
 import org.scalatest.{FunSuite, Matchers}
+import org.scalatestplus.junit.JUnitRunner
 
 @RunWith(classOf[JUnitRunner])
 class AnnoyerTest extends FunSuite with Matchers {
