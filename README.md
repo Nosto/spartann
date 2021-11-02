@@ -12,13 +12,13 @@ Registry, [https://docs.github.com/en/packages/guides/configuring-gradle-for-use
 
 The usage of Annoy is simple. Spartann accepts a dataset of identifier and vector pairs. To take the simplest object.
 
-```scala
+```
 case class Book(isbn: String, features: Array[Double]) extends Embeddings[String]
 ```
 
 All classes must implement the `Embeddings[T]` interface where `T` is the identifer of the object. `T` in this case is a `String` but may be anything. You must also specify the Annoy configuration. 
 
-```scala
+```
 final val annoyConfig: AnnoyConfig = AnnoyConfig(50, 256, annoy4s.Euclidean)
 ```
 
@@ -30,7 +30,7 @@ Annoy indexes all items with a non-negative integer value and allocates memory f
 
 Assume you have a dataset of `Dataset[Book]` and you need to find the similar books published by a publisher. 
 
-```scala
+```
 val records: List[Book] = List(...)
 sqlContext.createDataset(records)(Encoders.kryo[Book])
   .mapPartitions((books: Iterator[Book]) => {
@@ -47,7 +47,7 @@ sqlContext.createDataset(records)(Encoders.kryo[Book])
 
 Assume you have a dataset of `RDD[Book]` and you need to find the similar books published by a publisher. 
 
-```scala
+```
 sc.parallelize(..)
   .mapPartitions((books: Iterator[Book]) => {
      val vectors: Iterator[(Long, Book)] = books.zipWithIndex.map(_.swap)
