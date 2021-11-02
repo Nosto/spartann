@@ -9,7 +9,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Run Intellij
-        uses: mridang/action-idea@master
+        uses: mridang/action-idea@2020.3.3
         with:
           target: /github/workspace
           profile: /github/workspace/.idea/inspectionProfiles/CI.xml
