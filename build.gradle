@@ -27,7 +27,7 @@ plugins {
 }
 
 group 'com.nosto'
-version '0.0.3'
+version '0.0.4'
 
 repositories {
     mavenCentral()
@@ -119,9 +119,9 @@ task scaladocJar(type: Jar, dependsOn: scaladoc) {
     from scaladoc.destinationDir
 }
 
-artifacts {
-    archives sourcesJar
-    archives scaladocJar
+java {
+    withSourcesJar()
+    withJavadocJar()
 }
 
 // Configuration for the Spotbugs plugin. It seems that it isn't possible to define
@@ -197,11 +197,6 @@ publishing {
         maven(MavenPublication) {
             //noinspection GroovyAssignabilityCheck
             from components.java
-
-            //noinspection GroovyAssignabilityCheck
-            artifact sourcesJar
-            //noinspection GroovyAssignabilityCheck
-            artifact scaladocJar
 
             pom {
                 //noinspection GroovyAssignabilityCheck
