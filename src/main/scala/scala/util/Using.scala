@@ -89,6 +89,7 @@ import scala.util.control.{ControlThrowable, NonFatal}
  * @define suppressionBehavior See the main doc for [[Using `Using`]] for full details of
  *                             suppression behavior.
  */
+//noinspection All
 object Using {
 
   /** Performs an operation using a resource, and then releases the resource,
