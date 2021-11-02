@@ -19,8 +19,13 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew build -PignoreCheckFailures=true
 
+      - name: Checkstyle
+        uses: jwgmeligmeyling/checkstyle-github-action@v1.2
+        with:
+          path: ./build/reports/checkstyle/*.xml
+
       - name: Test Report
-        uses: scacap/action-surefire-report@v1.0.9
+        uses: scacap/action-surefire-report@v1.0.2
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           report_paths: ./build/test-results/test/*.xml
