@@ -6,6 +6,11 @@ plugins {
 group 'com.nosto'
 version '0.0.4'
 
+java {
+    sourceCompatibility "11"
+    targetCompatibility "11"
+}
+
 dependencies {
     testRuntimeOnly group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.2.0'
     testRuntimeOnly group: 'org.junit.vintage', name: 'junit-vintage-engine', version: '5.2.0'
