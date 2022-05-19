@@ -1,0 +1,12 @@
+name: Qodana
+on: push
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: 'Qodana Scan'
+        uses: JetBrains/qodana-action@v5.0.2

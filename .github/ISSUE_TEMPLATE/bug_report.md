@@ -7,17 +7,17 @@ assignees: ''
 
 ---
 
-**Versions Used**  
+**Versions Used**
 <!-- The ver. -->
 
-**Description**  
+**Description**
 <!-- A clear and concise description of the problem. -->
 
-**How to reproduce**  
+**How to reproduce**
 <!-- Code, config and/or steps needed to reproduce the problem. -->
 
-**Possible Solution**  
+**Possible Solution**
 <!--- Optional: only if you have suggestions on a fix/reason for the bug -->
 
-**Additional context**  
+**Additional context**
 <!-- Optional: any other context about the problem: log messages, screenshots, etc. -->

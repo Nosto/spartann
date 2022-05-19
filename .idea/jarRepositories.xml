@@ -36,5 +36,10 @@
       <option name="name" value="maven" />
       <option name="url" value="https://maven.onehippo.com/maven2/" />
     </remote-repository>
+    <remote-repository>
+      <option name="id" value="mridang" />
+      <option name="name" value="mridang" />
+      <option name="url" value="https://maven.pkg.github.com/nosto/beanie" />
+    </remote-repository>
   </component>
 </project>

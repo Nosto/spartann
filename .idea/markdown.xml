@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MarkdownSettings">
+    <option name="hideErrorsInCodeBlocks" value="true" />
+    <option name="previewPanelProviderInfo">
+      <ProviderInfo name="JavaFX WebView" className="org.intellij.plugins.markdown.ui.preview.javafx.JavaFxHtmlPanelProvider" />
+    </option>
+  </component>
+</project>
