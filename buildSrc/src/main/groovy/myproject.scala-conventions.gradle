@@ -1,0 +1,44 @@
+plugins {
+    id 'scala'
+    id "com.github.alisiikh.scalastyle"
+}
+
+dependencies {
+    testRuntimeOnly group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.2.0'
+    testRuntimeOnly group: 'org.junit.vintage', name: 'junit-vintage-engine', version: '5.2.0'
+}
+
+// Configuration for the Scalastyle plugin. It seems that it isn't possible to define
+// the output report formats here and those seem to be defined on the individual
+// task level.
+scalastyle {
+    config file("$rootDir/gradle/config/scalastyle/scalastyle_config.xml")
+}
+
+scaladoc {
+    scalaDocOptions.additionalParameters = ['-no-link-warnings']
+}
+
+//task sourcesJar(type: Jar, dependsOn: classes) {
+//    archiveClassifier.set("sources")
+//    from sourceSets.main.allSource
+//}
+
+task scaladocJar(type: Jar, dependsOn: scaladoc) {
+    archiveClassifier.set("javadoc")
+    from scaladoc.destinationDir
+}
+
+//noinspection GroovyAssignabilityCheck
+build {
+    dependsOn buildZip
+    dependsOn shadowJar
+}
+
+afterEvaluate {
+    configurations.all {
+        if (name.startsWith("incrementalScalaAnalysis")) {
+            extendsFrom = []
+        }
+    }
+}

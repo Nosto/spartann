@@ -28,10 +28,10 @@ jobs:
         uses: scacap/action-surefire-report@v1.0.9
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          report_paths: ./build/test-results/test/*.xml
+          report_paths: ./**/build/test-results/test/*.xml
 
       - name: Archive build output
         uses: actions/upload-artifact@v2
         with:
           name: gradle-build
-          path: build
+          path: ./**/build/

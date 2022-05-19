@@ -1,0 +1,27 @@
+plugins {
+    id 'groovy-gradle-plugin'
+}
+
+repositories {
+    google()
+    mavenCentral()
+    gradlePluginPortal()
+    maven {
+        url "https://repo.spring.io/milestone"
+    }
+}
+
+dependencies {
+    implementation group: 'gradle.plugin.com.github.johnrengelman', name: 'shadow', version: '7.1.2'
+    implementation group: 'com.github.alisiikh', name: 'gradle-scalastyle-plugin', version: '3.4.1'
+    implementation group: 'com.diffplug.spotless', name: 'spotless-plugin-gradle', version: '6.5.0'
+    implementation group: 'com.github.spotbugs.snom', name: 'spotbugs-gradle-plugin', version: '5.0.6'
+    implementation group: 'net.ltgt.gradle', name: 'gradle-errorprone-plugin', version: '2.0.2'
+    implementation group: 'net.ltgt.gradle', name: 'gradle-nullaway-plugin', version: '1.2.0'
+    implementation group: 'com.dorongold.plugins', name: 'task-tree', version: '2.1.0'
+    implementation group: 'net.idlestate', name: 'gradle-duplicate-classes-check', version: '1.1.0'
+    implementation group: 'org.jetbrains.qodana', name: 'gradle-qodana-plugin', version: '0.1.13'
+    implementation group: 'org.jetbrains.intellij.plugins', name: 'gradle-intellij-plugin', version: '1.5.3'
+    implementation group: 'gradle.plugin.com.hierynomus.gradle.plugins', name: 'license-gradle-plugin', version: '0.16.1'
+    implementation group: 'gradle.plugin.io.snyk.gradle.plugin', name: 'snyk', version: '0.4'
+}

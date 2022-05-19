@@ -1,0 +1,228 @@
+plugins {
+    id 'java'
+    id 'checkstyle'
+    id 'maven-publish'
+    id 'java-library'
+    id 'java-test-fixtures'
+    id "jacoco"
+    id "com.github.johnrengelman.shadow"
+    id 'com.diffplug.spotless'
+    id "com.github.spotbugs"
+    id "net.ltgt.errorprone"
+    id 'net.ltgt.nullaway'
+    id "com.dorongold.task-tree"
+    id 'net.idlestate.gradle-duplicate-classes-check'
+    id "org.jetbrains.qodana"
+    //id "org.jetbrains.intellij"
+    id "com.github.hierynomus.license-report"
+    id "io.snyk.gradle.plugin.snykplugin"
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://maven.onehippo.com/maven2/"
+    }
+    maven {
+        name = "mridang"
+        url = uri("https://maven.pkg.github.com/nosto/beanie")
+        credentials {
+            username = project.findProperty("githubUsername") ?: System.getenv("GITHUB_ACTOR")
+            password = project.findProperty("githubPassword") ?: System.getenv("GITHUB_TOKEN")
+        }
+    }
+}
+
+dependencies {
+    errorprone group: 'com.uber.nullaway', name: 'nullaway', version: '0.9.6'
+    errorprone group: 'com.google.errorprone', name: 'error_prone_core', version: '2.12.1'
+    spotbugsPlugins group: 'com.h3xstream.findsecbugs', name: 'findsecbugs-plugin', version: '1.12.0'
+    //checkstyle group: 'io.spring.nohttp', name: 'nohttp-checkstyle', version: '0.0.10'
+}
+
+// Configuration for the nullaway extension. The rest of the parameters must be
+// specified on the java-compile tasks. The only option that be specified here
+// is the name of the root package to be analysed.
+nullaway {
+    annotatedPackages.add("com.nosto")
+}
+
+// Configuration for the Jacoco plugin. It seems that it isn't possible to define
+// the output report formats here and those seem to be defined on the individual
+// task level.
+// I'm not sure why the tool version is defined here and it isn't managed as a
+// dependency.
+jacoco {
+    toolVersion = "0.8.8"
+}
+
+// We only need the XML report so that the CI tools can parse it. The HTML isn't needed.
+jacocoTestReport {
+    reports {
+        csv {
+            enabled true
+        }
+        xml {
+            enabled false
+        }
+        html {
+            enabled true
+        }
+    }
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+    reports {
+        junitXml {
+            enabled true
+        }
+        html {
+            enabled true
+        }
+    }
+    maxParallelForks = (int) (Runtime.runtime.availableProcessors() / 2 + 1)
+    finalizedBy jacocoTestReport // report is always generated after tests run
+}
+
+jacocoTestReport {
+    dependsOn test // tests are required to run before generating the report
+}
+
+javadoc {
+    options.addBooleanOption('html5', true)
+}
+
+task sourcesJar(type: Jar, dependsOn: classes) {
+    archiveClassifier.set("sources")
+    from sourceSets.main.allSource
+}
+
+java {
+    sourceCompatibility '17'
+    targetCompatibility '17'
+    withSourcesJar()
+    withJavadocJar()
+}
+
+// Configuration for the Spotbugs plugin. It seems that it isn't possible to define
+// the output report formats here and those seem to be defined on the individual
+// task level.
+// I'm not sure why the tool version is defined here and it isn't managed as a
+// dependency.
+spotbugs {
+    toolVersion = '4.6.0'
+    ignoreFailures = true
+    effort = 'max'
+    // Exclude all *.scala files as Spotbugs doesn't work too well with Scala.
+    excludeFilter = file("$rootDir/gradle/config/spotbugs/exclude.xml")
+}
+
+// We only need the XML report so that the CI tools can parse it. The HTML isn't needed.
+spotbugsMain {
+    reports {
+        sarif {
+            enabled true
+        }
+        xml {
+            enabled true
+        }
+    }
+}
+
+// We only need the XML report so that the CI tools can parse it. The HTML isn't needed.
+spotbugsTest {
+    reports {
+        sarif {
+            enabled true
+        }
+        xml {
+            enabled true
+        }
+    }
+}
+
+// Configuration for the Checkstyle plugin. It seems that it isn't possible to define
+// the output report formats here and those seem to be defined on the individual
+// task level.
+// I'm not sure why the tool version is defined here and it isn't managed as a
+// dependency.
+checkstyle {
+    toolVersion "10.1"
+    config rootProject.resources.text.fromFile("gradle/config/checkstyle/checkstyle.xml")
+}
+
+// We only need the XML report so that the CI tools can parse it. The HTML isn't needed
+// and must be explicitly disabled
+checkstyleMain {
+    reports {
+        xml {
+            enabled true
+        }
+        html {
+            enabled false
+        }
+    }
+}
+
+// We only need the XML report so that the CI tools can parse it. The HTML isn't needed.
+checkstyleTest {
+    reports {
+        xml {
+            enabled true
+        }
+        html {
+            enabled false
+        }
+    }
+}
+
+// Task for building the zip file for upload
+task buildZip(type: Zip) {
+    zip64 = true
+    archiveBaseName.set(rootProject.name)
+    from compileJava
+    from processResources
+    into('lib') {
+        from configurations.runtimeClasspath //TODO: Check for imagevector
+    }
+}
+
+shadowJar {
+    zip64 true
+}
+
+build {
+    dependsOn buildZip
+}
+
+qodana {
+    saveReport = true
+}
+
+
+checkForDuplicateClasses {
+    dependsOn assemble
+    excludes(['LICENSE',
+              '^com/sun/.*',
+              '^javax/.*',
+              '^org/apache/commons/logging/*',
+    ])
+    configurationsToCheck configurations.runtimeClasspath
+}
+
+
+downloadLicenses {
+    dependencyConfiguration = 'implementation'
+    includeProjectDependencies = true
+}
+
+configurations.implementation.setCanBeResolved(true)
+configurations.api.setCanBeResolved(true)
+
+snyk {
+    arguments = '--all-sub-projects --remote-repo-url=Nosto/fortknox --org=nosto'
+}
