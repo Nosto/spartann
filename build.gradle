@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'com.nosto'
-version '0.0.5'
+version '0.0.6'
 
 java {
     sourceCompatibility "11"
@@ -18,8 +18,12 @@ dependencies {
     testRuntimeOnly 'org.scala-lang.modules:scala-xml_2.12:2.0.1'
     testRuntimeOnly 'com.vladsch.flexmark:flexmark-all:0.62.2'
     implementation group: 'org.scala-lang', name: 'scala-library', version: '2.12.12'
-    implementation group: 'net.pishen', name: "annoy4s_2.12", version: '0.10.0'
-    implementation group: 'net.java.dev.jna', name: 'jna', version: '5.8.0'
+
+    // JNA 5.12.1 is needed to support M1 https://github.com/annoy4s/annoy4s/pull/18/files.
+    // Additionally we use custom built annoy4s package containing native code for M1 Mac & Linux ARM.
+    implementation group: 'net.pishen', name: "annoy4s_2.12", version: '0.10.0-nosto-m1-and-linux-arm-support'
+    implementation group: 'net.java.dev.jna', name: 'jna', version: '5.12.1'
+
     implementation group: 'org.apache.spark', name: "spark-core_2.12", version: '3.0.0'
     testImplementation group: 'com.holdenkarau', name: "spark-testing-base_2.12", version: '3.0.0_1.1.0'
     testImplementation group: 'com.fasterxml.jackson.module', name: 'jackson-module-scala_2.12', version: '2.12.3'
